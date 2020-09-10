@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/', '/en');
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => '{language}'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    // Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
