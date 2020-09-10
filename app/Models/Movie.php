@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Movie extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use SoftDeletes;
 
     /**
