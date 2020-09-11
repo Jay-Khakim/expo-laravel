@@ -78,3 +78,35 @@ models:
     image: string:300 
     timestamps: true
     softDeletes: true
+
+  Models/Branche:
+    name_en: string:300
+    name_uz: string:300
+    name_ru: string:300
+    image: string:300 
+    timestamps: true
+    softDeletes: true
+    relationships:
+      hasMany: Staff
+
+  Models/Staff: 
+    branche_id: id
+    status: enum:main,local,international,sud
+    name_en: string:300
+    name_uz: string:300
+    name_ru: string:300
+    position_en: string:300
+    position_uz: string:300
+    position_ru: string:300
+    reception_time_en: string:300 nullable
+    reception_time_uz: string:300 nullable
+    reception_time_ru: string:300 nullable
+    email: string:100 nullable
+    facebook: varchar:300 nullable
+    linkedin: varchar:300 nullable
+    twitter: varchar:300 nullable
+    timestamps: true
+    softDeletes: true
+    relationships:
+      belongsTo: Branche
+

@@ -18,6 +18,9 @@ class MembershipCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CloneOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\BulkCloneOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\BulkDeleteOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -41,23 +44,23 @@ class MembershipCrudController extends CrudController
     {
         CRUD::column('status');
         CRUD::column('name_en');
-        CRUD::column('name_uz');
-        CRUD::column('name_ru');
-        CRUD::column('slug_en');
+        // CRUD::column('name_uz');
+        // CRUD::column('name_ru');
+        // CRUD::column('slug_en');
         CRUD::column('certificate_number');
         CRUD::column('inn');
         CRUD::column('expiry_date');
-        CRUD::column('desc_en');
-        CRUD::column('desc_uz');
-        CRUD::column('desc_ru');
-        CRUD::column('file');
-        CRUD::column('web');
+        // CRUD::column('desc_en');
+        // CRUD::column('desc_uz');
+        // CRUD::column('desc_ru');
+        // CRUD::column('file');
+        // CRUD::column('web');
         CRUD::column('email');
         CRUD::column('phone');
-        CRUD::column('address_en');
-        CRUD::column('address_uz');
-        CRUD::column('address_ru');
-        CRUD::column('deleted_at');
+        // CRUD::column('address_en');
+        // CRUD::column('address_uz');
+        // CRUD::column('address_ru');
+        // CRUD::column('deleted_at');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
@@ -78,10 +81,17 @@ class MembershipCrudController extends CrudController
     {
         CRUD::setValidation(MembershipRequest::class);
 
-        CRUD::field('status');
-        CRUD::field('name_en');
-        CRUD::field('name_uz');
-        CRUD::field('name_ru');
+        CRUD::addField(
+            [   // Enum
+                'name'  => 'status',
+                'label' => 'Member Status',
+                'type'  => 'enum'
+            ],
+        );
+        CRUD::field('status')->size(6);
+        CRUD::field('name_en')->size(6);
+        CRUD::field('name_uz')->size(6);
+        CRUD::field('name_ru')->size(6);
         CRUD::field('slug_en');
         CRUD::field('certificate_number');
         CRUD::field('inn');

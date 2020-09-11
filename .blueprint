@@ -4,16 +4,22 @@ created:
     - database/factories/Models/MembershipFactory.php
     - database/factories/Models/MovieFactory.php
     - database/factories/Models/PictureFactory.php
-    - database/migrations/2020_09_10_105651_create_categories_table.php
-    - database/migrations/2020_09_10_105652_create_news_table.php
-    - database/migrations/2020_09_10_105653_create_memberships_table.php
-    - database/migrations/2020_09_10_105654_create_movies_table.php
-    - database/migrations/2020_09_10_105655_create_pictures_table.php
+    - database/factories/Models/BrancheFactory.php
+    - database/factories/Models/StaffFactory.php
+    - database/migrations/2020_09_11_045453_create_categories_table.php
+    - database/migrations/2020_09_11_045454_create_news_table.php
+    - database/migrations/2020_09_11_045455_create_memberships_table.php
+    - database/migrations/2020_09_11_045456_create_movies_table.php
+    - database/migrations/2020_09_11_045457_create_pictures_table.php
+    - database/migrations/2020_09_11_045458_create_branches_table.php
+    - database/migrations/2020_09_11_045459_create_staff_table.php
     - app/Models/Category.php
     - app/Models/News.php
     - app/Models/Membership.php
     - app/Models/Movie.php
     - app/Models/Picture.php
+    - app/Models/Branche.php
+    - app/Models/Staff.php
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
     Models/Category: { name_en: 'string:1000', name_uz: 'string:1000', name_ru: 'string:1000', slug_en: 'string:1000 nullable', timestamps: timestamps, softdeletes: softDeletes, relationships: { hasMany: News } }
@@ -21,3 +27,5 @@ models:
     Models/Membership: { status: 'enum:active,inactive', name_en: 'string:300', name_uz: 'string:300', name_ru: 'string:300', slug_en: 'string:300 unique nullable', certificate_number: integer, inn: integer, expiry_date: date, desc_en: 'longtext nullable', desc_uz: 'longtext nullable', desc_ru: 'longtext nullable', file: 'string:300', web: 'varchar:80 nullable', email: 'string:100 nullable', phone: 'char:25 nullable', address_en: 'varchar:255 nullable', address_uz: 'varchar:255 nullable', address_ru: 'varchar:255 nullable', timestamps: timestamps, softdeletes: softDeletes }
     Models/Movie: { name_en: 'string:300', name_uz: 'string:300', name_ru: 'string:300', link: 'varchar:500 nullable', timestamps: timestamps, softdeletes: softDeletes }
     Models/Picture: { name_en: 'string:300', name_uz: 'string:300', name_ru: 'string:300', image: 'string:300', timestamps: timestamps, softdeletes: softDeletes }
+    Models/Branche: { name_en: 'string:300', name_uz: 'string:300', name_ru: 'string:300', image: 'string:300', timestamps: timestamps, softdeletes: softDeletes, relationships: { hasMany: Staff } }
+    Models/Staff: { branche_id: id, status: 'enum:main,local,international,sud', name_en: 'string:300', name_uz: 'string:300', name_ru: 'string:300', position_en: 'string:300', position_uz: 'string:300', position_ru: 'string:300', reception_time_en: 'string:300 nullable', reception_time_uz: 'string:300 nullable', reception_time_ru: 'string:300 nullable', email: 'string:100 nullable', facebook: 'varchar:300 nullable', linkedin: 'varchar:300 nullable', twitter: 'varchar:300 nullable', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsTo: Branche } }

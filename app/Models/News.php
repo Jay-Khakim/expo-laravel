@@ -59,4 +59,8 @@ class News extends Model
         return $this->belongsTo(\App\Models\Category::class);
     }
 
+    public function category()
+    {
+        return $this->belongsTo(\App\Models\Category::class);
+    }
 }
