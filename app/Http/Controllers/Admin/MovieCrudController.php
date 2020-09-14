@@ -40,10 +40,10 @@ class MovieCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name_en');
-        CRUD::column('name_uz');
-        CRUD::column('name_ru');
+        // CRUD::column('name_uz');
+        // CRUD::column('name_ru');
         CRUD::column('link');
-        CRUD::column('deleted_at');
+        // CRUD::column('deleted_at');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
