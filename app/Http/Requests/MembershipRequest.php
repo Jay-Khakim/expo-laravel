@@ -26,7 +26,16 @@ class MembershipRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'status' =>"required",
+            'name_en' => 'required|min:2|max:255',
+            'name_uz' => 'required|min:2|max:255',
+            'name_ru' => 'required|min:2|max:255',
+            'certificate_number' => 'required',
+            'inn' => 'required',
+            'expiry_date'=>'required',
+            'file' => 'required|file',
+            // 'image'=> 'required'
+
         ];
     }
 

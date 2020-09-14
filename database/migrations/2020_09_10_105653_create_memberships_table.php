@@ -20,8 +20,8 @@ class CreateMembershipsTable extends Migration
             $table->string('name_uz', 300);
             $table->string('name_ru', 300);
             $table->string('slug_en', 300)->unique()->nullable();
-            $table->integer('certificate_number');
-            $table->integer('inn');
+            $table->bigInteger('certificate_number');
+            $table->bigInteger('inn');
             $table->date('expiry_date');
             $table->longText('desc_en')->nullable();
             $table->longText('desc_uz')->nullable();
@@ -33,6 +33,7 @@ class CreateMembershipsTable extends Migration
             $table->string('address_en')->nullable();
             $table->string('address_uz')->nullable();
             $table->string('address_ru')->nullable();
+            $table->string('image', 300)->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
