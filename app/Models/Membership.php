@@ -13,7 +13,7 @@ use App\Http\Requests\CompanyRequest;
 class Membership extends Model
 {
     use \Backpack\CRUD\app\Models\Traits\CrudTrait;
-    use SoftDeletes;
+    // use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
