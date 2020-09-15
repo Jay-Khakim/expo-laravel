@@ -26,7 +26,10 @@ class PictureRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name_uz' => 'required|min:2|max:255',
+            'name_ru' => 'required|min:2|max:255',
+            'name_en' => 'required|min:2|max:255',
+            'image' =>'required'
         ];
     }
 
