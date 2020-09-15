@@ -23,6 +23,7 @@ class CreateStaffTable extends Migration
             $table->string('position_en', 300);
             $table->string('position_uz', 300);
             $table->string('position_ru', 300);
+            $table->string('image', 300);
             $table->string('reception_time_en', 300)->nullable();
             $table->string('reception_time_uz', 300)->nullable();
             $table->string('reception_time_ru', 300)->nullable();

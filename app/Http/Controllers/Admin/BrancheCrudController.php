@@ -18,6 +18,9 @@ class BrancheCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CloneOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\BulkCloneOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\BulkDeleteOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -40,10 +43,10 @@ class BrancheCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name_en');
-        CRUD::column('name_uz');
-        CRUD::column('name_ru');
-        CRUD::column('image');
-        CRUD::column('deleted_at');
+        // CRUD::column('name_uz');
+        // CRUD::column('name_ru');
+        // CRUD::column('image');
+        // CRUD::column('deleted_at');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
@@ -64,10 +67,10 @@ class BrancheCrudController extends CrudController
     {
         CRUD::setValidation(BrancheRequest::class);
 
-        CRUD::field('name_en');
-        CRUD::field('name_uz');
-        CRUD::field('name_ru');
-        CRUD::field('image');
+        CRUD::field('name_en')->size(6);
+        CRUD::field('name_uz')->size(6);
+        CRUD::field('name_ru')->size(6);
+        // CRUD::field('image');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
