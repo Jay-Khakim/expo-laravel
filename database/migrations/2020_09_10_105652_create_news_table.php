@@ -16,7 +16,7 @@ class CreateNewsTable extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('category_id');
-            $table->set('type', ["news","article","pressreliese","event"]);
+            $table->enum('type', ["news","article","pressreliese","event"]);
             $table->string('title_en', 500);
             $table->string('title_uz', 500);
             $table->string('title_ru', 500);
@@ -36,10 +36,10 @@ class CreateNewsTable extends Migration
             $table->string('author_en', 100)->nullable();
             $table->string('author_uz', 100)->nullable();
             $table->string('author_ru', 100)->nullable();
-            $table->string('image1', 300);
-            $table->string('image2', 300)->nullable();
-            $table->string('image3', 300)->nullable();
-            $table->string('image4', 300)->nullable();
+            $table->mediumText('image1');
+            $table->mediumText('image2')->nullable();
+            $table->mediumText('image3')->nullable();
+            $table->mediumText('image4')->nullable();
             $table->softDeletes();
             $table->timestamps();
             $table->foreign('category_id')

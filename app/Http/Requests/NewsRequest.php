@@ -26,7 +26,28 @@ class NewsRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'category_id' => 'required',
+            'type' => 'required',
+            'title_en' => 'required|min:2|max:500',
+            'title_ru' => 'required|min:2|max:500',
+            'title_uz' => 'required|min:2|max:500',
+            // 'slug_uz' => 'required|min:2|max:500',
+            'intro_en' => 'required|min:2|max:2500',
+            'intro_ru' => 'required|min:2|max:2500',
+            'intro_uz' => 'required|min:2|max:2500',
+            // 'highlighted_en' => 'min:2|max:500',
+            // 'highlighted_ru' => 'min:2|max:500',
+            // 'highlighted_uz' => 'min:2|max:500',
+            // 'body_en' => 'min:2|max:2500',
+            // 'body_ru' => 'min:2|max:2500',
+            // 'body_uz' => 'min:2|max:2500',
+            // 'conclusion_en' => 'min:2|max:2500',
+            // 'conclusion_ru' => 'min:2|max:2500',
+            // 'conclusion_uz' => 'min:2|max:2500',
+            // 'author_en' => 'min:2|max:100',
+            // 'author_ru' => 'min:2|max:100',
+            // 'author_uz' => 'min:2|max:100',
+            'image1' => 'required'
         ];
     }
 
