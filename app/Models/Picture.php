@@ -34,11 +34,11 @@ class Picture extends Model
     ];
 
 
-     public function setImageAttribute($value)
+    public function setImageAttribute($value)
     {
         $attribute_name = "image";
         $disk = "public";
-        $destination_path = "news";
+        $destination_path = "pictures";
         // dd($value);
         // if the image was erased
         if ($value==null) {
