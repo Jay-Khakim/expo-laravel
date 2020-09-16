@@ -57,6 +57,17 @@ class MembershipCrudController extends CrudController
         // CRUD::column('web');
         CRUD::column('email');
         CRUD::column('phone');
+        CRUD::addColumn(
+            [
+                'name' => 'image', // The db column name
+                'label' => "Company Logo", // Table column heading
+                'type' => 'image',
+                'prefix' => 'storage/',
+                // optional width/height if 25px is not ok with you
+                'height' => '60px',
+                'width' => '60px',
+            ],
+        );
         // CRUD::column('address_en');
         // CRUD::column('address_uz');
         // CRUD::column('address_ru');
@@ -163,17 +174,17 @@ class MembershipCrudController extends CrudController
         CRUD::field('address_uz')->size(6);
         CRUD::field('address_ru')->size(6);
         // CRUD::field('image');
-        // CRUD::addField(
-        //     [
-        //         'label' => "Company Logo",
-        //         'name' => "image",
-        //         'type' => 'image',
-        //         'crop' => true, // set to true to allow cropping, false to disable
-        //         'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
-        //         'disk'      => 'uploads', // in case you need to show images from a different disk
-        //         // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
-        //     ]
-        // );
+        CRUD::addField(
+            [
+                'label' => "Company Logo",
+                'name' => "image",
+                'type' => 'image',
+                'crop' => true, // set to true to allow cropping, false to disable
+                'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
+                'disk'      => 'uploads', // in case you need to show images from a different disk
+                // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
+            ]
+        );
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

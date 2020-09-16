@@ -35,6 +35,7 @@ class Membership extends Model
         'file',
         'web',
         'email',
+        'image',
         'phone',
         'address_en',
         'address_uz',
@@ -93,34 +94,36 @@ class Membership extends Model
     //         $this->attributes[$attribute_name] = $destination_path.'/'.$new_file_name;
     //     }
     // }
-    // public function setImageAttribute($value)
-    // {
-    //     $attribute_name = "image";
-    //     $disk = "public";
-    //     $destination_path = "img/company";
-    //     dd($value);
-    //     // if the image was erased
-    //     if ($value==null) {
-    //         // delete the image from disk
-    //         \Storage::disk($disk)->delete($this->{$attribute_name});
+    public function setImageAttribute($value)
+    {
+        $attribute_name = "image";
+        $disk = "public";
+        $destination_path = "membership";
+        // dd($value);
+        // if the image was erased
+        if ($value==null) {
+            // delete the image from disk
+            \Storage::disk($disk)->delete($this->{$attribute_name});
 
-    //         // set null in the database column
-    //         $this->attributes[$attribute_name] = null;
-    //     }
+            // set null in the database column
+            $this->attributes[$attribute_name] = null;
+        }
 
-    //     // if a base64 was sent, store it in the db
-    //     if (starts_with($value, 'data:image'))
-    //     {
-    //         // 0. Make the image
-    //         $image = \Image::make($value);
-    //         // 1. Generate a filename.
-    //         $filename = md5($value.time()).'.jpg';
-    //         // 2. Store the image on disk.
-    //         \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
-    //         // 3. Save the path to the database
-    //         $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
-    //     }
-    // }
+        // if a base64 was sent, store it in the db
+        if (Str::startsWith($value, 'data:image'))
+        {
+            // 0. Make the image
+            $image = \Image::make($value)->encode('jpg', 90);
+            // 1. Generate a filename.
+            $filename = md5($value.time()).'.jpg';
+            // dd($filename);
+            // 2. Store the image on disk.
+            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+            // 3. Save the path to the database
+            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+            // dd(12);
+        }
+    } 
 
     public function setFileAttribute($value)
     {
@@ -151,7 +154,7 @@ class Membership extends Model
             // 2. Move the new file to the correct path
             // dd($destination_path);
             
-            $file_path = $file->storeAs("/", $new_file_name, $disk);
+            $file_path = $file->storeAs("/certificate", $new_file_name, $disk);
             // dd($file_path);
             // 3. Save the complete path to the database
             // $this->attributes[$attribute_name] = $file_path;
@@ -167,6 +170,7 @@ class Membership extends Model
         parent::boot();
         static::deleting(function($value) {
         \Storage::disk('public')->delete($value->file);
+        \Storage::disk('public')->delete($value->image);
         });
     }
 

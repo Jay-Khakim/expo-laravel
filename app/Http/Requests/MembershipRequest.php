@@ -34,7 +34,7 @@ class MembershipRequest extends FormRequest
             'inn' => 'required',
             'expiry_date'=>'required',
             'file' => 'required|file',
-            // 'image'=> 'required'
+            'image'=> 'required'
 
         ];
     }
