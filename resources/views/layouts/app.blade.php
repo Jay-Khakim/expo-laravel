@@ -6,8 +6,23 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Ўзбекистон экспортчилар уюшмаси</title>
+    <meta name="author" content="MBM IT Company">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/colors/color5.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/animate.css">
+    <link href="icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link href="icon/apple-touch-icon-32-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="icon/favicon.png" rel="shortcut icon">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{-- Jot form --}}
+    <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"> new JotformFeedback({ formId: "202573195115452", buttonText: "Уюшма аъзо бўлиш", base: "https://form.jotform.com/", background: "#1CBAC8", fontColor: "#FFFFFF", buttonSide: "right", buttonAlign: "center", type: false, width: 700, height: 500, isCardForm: false }); 
+    </script>
+
+    
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,62 +34,28 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body class="header-sticky page-loading">
+    
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+    <!-- Javascript -->
+    <script type="text/javascript" src="/javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.easing.js"></script> 
+    <script type="text/javascript" src="/javascript/owl.carousel.js"></script> 
+    <script type="text/javascript" src="/javascript/jquery-waypoints.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIm1AxfRgiI_w36PonGqb_uNNMsVGndKo&v=3.7"></script>
+    <script type="text/javascript" src="/javascript/gmap3.min.js"></script>
+    <script type="text/javascript" src="/javascript/parallax.js"></script>
+    <!-- <script type="text/javascript" src="javascript/switcher.js"></script> -->
+    <script type="text/javascript" src="/javascript/smoothscroll.js"></script>
+    <script type="text/javascript" src="/javascript/jquery-validate.js"></script>
+    <script type="text/javascript" src="/javascript/main.js"></script>
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+    <!-- Revolution Slider -->
+    <script type="text/javascript" src="/javascript/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="/javascript/slider.js"></script>
 </body>
 </html>
