@@ -65,7 +65,7 @@
                                             
                                         </ul><!-- /.submenu -->
                                     </li>
-                                    <li><a href="join.php">@lang("Memebership")</a>
+                                    <li><a href="join.php">@lang("Membership")</a>
                                         <ul class="submenu"> 
                                             <li><a href="join.php">@lang("Become a member")</a></li>
                                             <li><a href="join1.php">@lang("List of members")</a></li>
