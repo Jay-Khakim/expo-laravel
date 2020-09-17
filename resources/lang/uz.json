@@ -6,7 +6,7 @@
     "Social media": "Ижтимоий тармоқлар",
     "Main": "Асосий",
     "Association": "Уюшма",
-    "Memebership": "Аъзолик",
+    "Membership": "Аъзолик",
     "Headquarter": "Марказий аппарат",
     "About association": "Уюшма ҳақида",
     "Services": "Асосий ҳизматлар",
@@ -25,13 +25,29 @@
     "Events": "Тадбирлар",
     "Information": "Маълумотлар",
     "Statistics": "Статистик маълумотлар",
-    "Очиқ маълумотлар": "Open data",
+    "Open data": "Очиқ маълумотлар",
     "Media": "Медиа",
     "Gallery": "Фото",
     "Video": "Видео",
     "Infographics": "Инфографика",
     "Contacts": "Aлоқа",
-    "Search": "Излаш"
+    "Search": "Излаш",
+    "Contact us": "Биз билан алоқа",
+    "8A, Korakamish street, Olmazor region, Tahskent city": "Ташкент шаҳар, Олмазор тумани, Коракамиш кўчаси, 8А",
+    "Coordinating the activities of enterprises that are members of the Association, as well as representing and protecting the interests of the joint property.": "Уюшма аъзолари бўлган корхоналарни фаолиятларини мувофиқлаштириш, шунингдек муштарак мулкий манфаатларини ифода этиш ҳамда ҳимоя қилиш.",
+    "More": "Батафсил",
+    "About us": "Биз ҳақимизда",
+    "Questions": "Саволлар",
+    "Association activities": "Уюшма фаолияти",
+    "SRC": "ИТМ",
+    "New projects": "Янги лойиҳалар",
+    "Video messages": "Видео хабарлар",
+    "Subscribe to Exportuz news": "Exportuz сайти янгиликларга аъзо бўлиш",
+    "Leave your Email": "Эмаил қолдиринг",
+    "Send": "Юбориш"
+
+
+
 
 
 }
