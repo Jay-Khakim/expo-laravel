@@ -129,6 +129,13 @@ class StaffCrudController extends CrudController
         CRUD::field('reception_time_en')->size(4);
         CRUD::field('reception_time_uz')->size(4);
         CRUD::field('reception_time_ru')->size(4);
+        CRUD::addField(
+            [   // text
+                'name'  => 'email',
+                'label' => 'Email or phone',
+                'type'  => 'text'
+            ],
+        );
         CRUD::field('email')->size(3);
         CRUD::field('facebook')->size(3);
         CRUD::field('linkedin')->size(3);
@@ -138,8 +145,8 @@ class StaffCrudController extends CrudController
                 'label' => "Image",
                 'name' => "image",
                 'type' => 'image',
-                'crop' => true, // set to true to allow cropping, false to disable
-                'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
+                // 'crop' => true, // set to true to allow cropping, false to disable
+                // 'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
                 'disk'      => 'uploads', // in case you need to show images from a different disk
                 // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
             ]
