@@ -17,9 +17,13 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->enum('type', ["news","article","pressreliese","event"]);
+            $table->enum('media_type', ["video","article", 'photo']);
             $table->string('title_en', 500);
             $table->string('title_uz', 500);
             $table->string('title_ru', 500);
+            $table->string('subtitle_en', 500)->nullable();
+            $table->string('subtitle_uz', 500)->nullable();
+            $table->string('subtitle_ru', 500)->nullable();
             $table->string('slug_en', 300)->unique()->nullable();
             $table->longText('intro_en');
             $table->longText('intro_uz');
@@ -36,6 +40,7 @@ class CreateNewsTable extends Migration
             $table->string('author_en', 100)->nullable();
             $table->string('author_uz', 100)->nullable();
             $table->string('author_ru', 100)->nullable();
+            $table->string('link', 500)->nullable();
             $table->mediumText('image1');
             $table->mediumText('image2')->nullable();
             $table->mediumText('image3')->nullable();

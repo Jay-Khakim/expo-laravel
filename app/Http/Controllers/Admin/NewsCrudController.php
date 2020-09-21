@@ -55,8 +55,12 @@ class NewsCrudController extends CrudController
                 'model'     => "App\Models\Category", // foreign key model
             ],
         );
-        // CRUD::column('type');
+        CRUD::column('type');
         CRUD::column('title_en');
+        CRUD::column('media_type');
+        CRUD::column('subtitle_en');
+        // CRUD::column('subtitle_uz');
+        // CRUD::column('subtitle_ru');
         // CRUD::column('title_uz');
         // CRUD::column('title_ru');
         // CRUD::column('slug_en');
@@ -128,15 +132,25 @@ class NewsCrudController extends CrudController
         CRUD::addField(
             [   // Enum
                 'name'  => 'type',
-                'label' => 'Company Status',
+                'label' => 'Status',
                 'type'  => 'enum'
             ],
         );
         CRUD::field('type')->size(6);
+        CRUD::addField(
+            [   // Enum
+                'name'  => 'media_type',
+                'label' => 'Media Type',
+                'type'  => 'enum'
+            ],
+        );
 
         CRUD::field('title_en');
         CRUD::field('title_uz');
         CRUD::field('title_ru');
+        CRUD::field('subtitle_en');
+        CRUD::field('subtitle_uz');
+        CRUD::field('subtitle_ru');
         CRUD::field('slug_en');
         CRUD::field('intro_en');
         CRUD::field('intro_uz');
@@ -243,6 +257,7 @@ class NewsCrudController extends CrudController
         CRUD::field('author_en')->size(4);
         CRUD::field('author_uz')->size(4);
         CRUD::field('author_ru')->size(4);
+        CRUD::field('link');
         CRUD::addField(
             [
                 'label' => "Picture 1",

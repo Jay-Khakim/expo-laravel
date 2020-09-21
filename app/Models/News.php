@@ -20,9 +20,13 @@ class News extends Model
     protected $fillable = [
         'category_id',
         'type',
+        'media_type',
         'title_en',
         'title_uz',
         'title_ru',
+        'subtitle_en',
+        'subtitle_uz',
+        'subtitle_ru',
         'slug_en',
         'intro_en',
         'intro_uz',
@@ -39,6 +43,7 @@ class News extends Model
         'author_en',
         'author_uz',
         'author_ru',
+        'link',
         'image1',
         'image2',
         'image3',
@@ -54,6 +59,18 @@ class News extends Model
         'id' => 'integer',
         'category_id' => 'integer',
     ];
+
+    protected $lang_fields =[
+        'title', 'subtitle', 'intro', 'highlighted', 'body', 'conclusion', 'author',
+    ];
+
+    public function __get($attribute){
+        if (in_array($attribute, $this->lang_fields)) { 
+            $localeSpecificAttribute = $attribute.'_'.app()->getLocale();
+            return $this->{$localeSpecificAttribute};
+        }   
+        return parent::__get($attribute);
+    }
     
     public function setImage1Attribute($value)
     {
