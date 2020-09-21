@@ -22,7 +22,7 @@
                             <ul class="trail-items">
                                 {{-- <li>@lang("You are at this destination"):</li> --}}
                                 <li class="trail-item"><a href="{{route('home', app()->getLocale())}}">@lang("Main")</a></li>
-                                <li class="trail-item"><a href="about.php">@lang("Association")</a></li>
+                                <li class="trail-item"><a href="{{route('about', app()->getLocale())}}">@lang("Association")</a></li>
                                 <li class="trail-end">>@lang("Headquarter")</li>
                             </ul>                   
                         </div>
@@ -98,10 +98,10 @@
                                     <div class="widget widget_nav_menu">
                                         <ul class="nav_menu">
                                             <li class="menu-item">
-                                                <a class="active" href="team.html.php">@lang("Headquarter")</a>
+                                                <a class="active" href="{{route('main', app()->getLocale())}}">@lang("Headquarter")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a  href="com-history.php">@lang("About association")</a>
+                                                <a  href="{{route('about', app()->getLocale())}}">@lang("About association")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="service.php">@lang("Services")</a>
