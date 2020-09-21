@@ -22,7 +22,9 @@
                     <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
                         <img src="/storage/{{$news->image1}}" alt="{{$news->title}}" />
                         <div class="tp-caption sfl title-slide center" data-x="40" data-y="111" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
-                            <p style="color: white;">{{$news->title}}</p>
+                            <div class="break">
+                                <p id="slider" style="color: white;">{{$news->title}}</p>
+                            </div>
                         </div>
                         <div class="tp-caption sfr desc-slide center" data-x="40" data-y="272" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
                             <p style="color: white;">{{$news->subtitle}}</p>
