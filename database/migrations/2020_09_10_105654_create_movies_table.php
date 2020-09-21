@@ -18,7 +18,7 @@ class CreateMoviesTable extends Migration
             $table->string('name_en', 300);
             $table->string('name_uz', 300);
             $table->string('name_ru', 300);
-            $table->string('link')->nullable();
+            $table->string('link', 500)->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

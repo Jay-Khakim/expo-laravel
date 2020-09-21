@@ -36,4 +36,16 @@ class Branche extends Model
     {
         return $this->hasMany(\App\Models\Staff::class);
     }
+
+    protected $lang_fields =[
+        'name', 'position', 'reception_time'
+    ];
+
+    public function __get($attribute){
+        if (in_array($attribute, $this->lang_fields)) { 
+            $localeSpecificAttribute = $attribute.'_'.app()->getLocale();
+            return $this->{$localeSpecificAttribute};
+        }   
+        return parent::__get($attribute);
+    }
 }
