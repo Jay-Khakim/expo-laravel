@@ -22,5 +22,6 @@ Route::group(['prefix' => '{language}'], function () {
     // Auth::routes();
 
     Route::get('/', 'PageController@index')->name('home');
+    Route::get('/headquater', 'PageController@headquater')->name('headquater');
 });
 

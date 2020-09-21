@@ -39,8 +39,8 @@
                 {{-- <div class="col-md-9"> --}}
                     <div class="col-md-9">
                         <div id="logo" class="logo">
-                            <a href="index.php">
-                                <img src="images/logo.png" width="50" height="50" alt="images">
+                            <a href="{{route('home', app()->getLocale())}}">
+                                <img src="/images/logo.png" width="50" height="50" alt="images">
                             </a>
                         </div><!-- /.logo -->
                         <div class="btn-menu">
@@ -51,11 +51,11 @@
                             <nav id="mainnav" class="mainnav" style="margin-top: -3px;">
                                 <ul class="menu"> 
                                     <li class="home">
-                                        <a href="index.php" class="active">@lang("Main")</a>
+                                        <a href="{{route('home', app()->getLocale())}}" class="active">@lang("Main")</a>
                                     </li>
-                                    <li><a href="team.php">@lang("Association")</a>
+                                    <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Association")</a>
                                         <ul class="submenu">
-                                            <li><a href="team.php">@lang("Headquarter")</a></li>
+                                            <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a></li>
                                             <li><a href="com-history.php">@lang("About association")</a></li>
                                             <li><a href="service.php">@lang("Services")</a></li>
                                             <li><a href="sub-team.php">@lang("Territorial divisions")</a></li>

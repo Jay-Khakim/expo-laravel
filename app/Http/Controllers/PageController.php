@@ -39,4 +39,10 @@ class PageController extends Controller
         // dd($main_employers);
         return view('index')->with(compact('banner_news', 'latests', 'right_side_latests', 'main_employers', 'territorial_employers'));
     }
+
+    public function headquater(){
+
+        $main_employers= Staff::where('status', 'main')->paginate(5);
+        return view('association.headquater')->with(compact('main_employers'));
+    }
 }

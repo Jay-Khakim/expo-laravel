@@ -21,7 +21,7 @@
                             <div class="footer-30">
                                 <div class="widget widget_text">            
                                     <div class="textwidget">
-                                        <div class="logo-ft" id="logo-mob"><img src="images/logo-ft.png" alt="logo"></div>
+                                        <div class="logo-ft" id="logo-mob"><img src="/images/logo-ft.png" alt="logo"></div>
                                     </div>
                                 </div>
                             </div><!-- /.col-md-2 -->
