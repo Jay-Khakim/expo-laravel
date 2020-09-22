@@ -56,7 +56,7 @@
                                     <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Association")</a>
                                         <ul class="submenu">
                                             <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a></li>
-                                            <li><a href="com-history.php">@lang("About association")</a></li>
+                                            <li><a href="{{route('about', app()->getLocale())}}">@lang("About association")</a></li>
                                             <li><a href="service.php">@lang("Services")</a></li>
                                             <li><a href="sub-team.php">@lang("Territorial divisions")</a></li>
                                             <li><a href="sub-team1.php">@lang("Foreign divisions")</a></li>

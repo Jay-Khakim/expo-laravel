@@ -23,5 +23,6 @@ Route::group(['prefix' => '{language}'], function () {
 
     Route::get('/', 'PageController@index')->name('home');
     Route::get('/headquater', 'PageController@headquater')->name('headquater');
+    Route::get('/about', 'PageController@about')->name('about');
 });
 

@@ -45,4 +45,8 @@ class PageController extends Controller
         $main_employers= Staff::where('status', 'main')->paginate(5);
         return view('association.headquater')->with(compact('main_employers'));
     }
+
+    public function about(){
+        return view('association.about');
+    }
 }
