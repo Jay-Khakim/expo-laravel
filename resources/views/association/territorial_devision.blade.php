@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('language')
     <li>
-        <a href="{{route('headquater', 'en') }}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
+        <a href="{{route('territorial', 'en') }}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
     </li>
     <li>
-        <a href="{{route('headquater', 'ru') }}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
+        <a href="{{route('territorial', 'ru') }}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
     </li>
     <li>
-        <a href="{{route('headquater', 'uz') }}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
+        <a href="{{route('territorial', 'uz') }}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
     </li>
 @endsection
 
 @section('content')
-<!-- Page title -->
+    <!-- Page title -->
     <div class="page-title style1">
         <div class="container">
             <div class="row">
@@ -20,10 +20,9 @@
                     <div class="page-title-heading">
                         <div class="breadcrumbs">
                             <ul class="trail-items">
-                                {{-- <li>@lang("You are at this destination"):</li> --}}
                                 <li class="trail-item"><a href="{{route('home', app()->getLocale())}}">@lang("Main")</a></li>
-                                <li class="trail-item"><a href="{{route('about', app()->getLocale())}}">@lang("Association")</a></li>
-                                <li class="trail-end">>@lang("Headquarter")</li>
+                                <li class="trail-item"><a href="{{route('about', app()->getLocale())}}">@lang('Association')</a></li>
+                                <li class="trail-end">@lang("Territorial divisions")</li>
                             </ul>                   
                         </div>
                     </div><!-- /.page-title-captions -->                        
@@ -37,21 +36,22 @@
                 <div class="row">
                     <div class="flat-wrapper">
                         <div class="general flat-teammember">
-                            @foreach ($main_employers as $main)
+                            @foreach ($territorial_employers as $territorial)
                                 <div class="member">
                                     <div class="member-image">
-                                        <img src="/storage/{{$main->image}}" alt="{{$main->name}}">
+                                        <img src="/storage/{{$territorial->image}}" alt="{{$territorial->name}}">
                                     </div>
                                     <div class="member-info">
-                                        <h3 class="member-name">{{$main->name}}</h3><br>
-                                        <div class="member-subtitle">{{$main->position}}</div>
+                                        <h3 class="member-name">{{$territorial->name}}</h3><br>
+                                        <div class="member-subtitle">{{$territorial->branche->name}}</div><br>
+                                        <div class="member-subtitle">{{$territorial->position}}</div>
                                         <div class="member-desc">
-                                            <p>{{$main->reception_time}}</p>
+                                            <p>{{$territorial->reception_time}}</p>
                                         </div>
                                         <div class="social-links style1">
                                             <a href="
-                                                @if ($main->twitter)
-                                                    {{$main->twitter}}
+                                                @if ($territorial->twitter)
+                                                    {{$territorial->twitter}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -59,8 +59,8 @@
                                                 <i class="fa fa-twitter"></i>
                                             </a>
                                             <a href="
-                                                @if ($main->facebook)
-                                                    {{$main->facebook}}
+                                                @if ($territorial->facebook)
+                                                    {{$territorial->facebook}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -68,8 +68,8 @@
                                                 <i class="fa fa-facebook-official"></i>
                                             </a>
                                             <a href="
-                                                @if ($main->linkedin)
-                                                    {{$main->linkedin}}
+                                                @if ($territorial->linkedin)
+                                                    {{$territorial->linkedin}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -77,8 +77,8 @@
                                                 <i class="fa fa-linkedin"></i>
                                             </a>
                                             <a href="
-                                                @if ($main->email)
-                                                    {{$main->email}}
+                                                @if ($territorial->email)
+                                                    {{$territorial->email}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -89,7 +89,7 @@
                                     </div>
                                 </div><!-- /.member -->
                             @endforeach
-                            {{$main_employers->links()}} 
+                            {{$territorial_employers->links()}} 
                         </div><!-- /.flat-teammember -->
 
                         <div class="general-sidebar">
@@ -98,7 +98,7 @@
                                     <div class="widget widget_nav_menu">
                                         <ul class="nav_menu">
                                             <li class="menu-item">
-                                                <a class="active" href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a>
+                                                <a class="" href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a  href="{{route('about', app()->getLocale())}}">@lang("About association")</a>
@@ -107,7 +107,7 @@
                                                 <a href="{{route('service', app()->getLocale())}}">@lang("Services")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
+                                                <a class="active" href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="sub-team1.php">@lang("Foreign divisions")</a>

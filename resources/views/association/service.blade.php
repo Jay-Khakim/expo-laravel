@@ -165,7 +165,7 @@
                                                 <a class="active" href="{{route('service', app()->getLocale())}}">@lang("Services")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="sub-team.php">@lang("Territorial divisions")</a>
+                                                <a href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="sub-team1.php">@lang("Foreign divisions")</a>

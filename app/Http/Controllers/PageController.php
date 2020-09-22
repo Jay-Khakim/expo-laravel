@@ -53,4 +53,10 @@ class PageController extends Controller
     public function service(){
         return view('association.service');
     }
+
+    public function territorial(){
+        $territorial_employers= Staff::where('status', 'local')->paginate(5);
+
+        return view('association.territorial_devision')->with(compact('territorial_employers'));
+    }
 }
