@@ -98,7 +98,7 @@
                                     <div class="widget widget_nav_menu">
                                         <ul class="nav_menu">
                                             <li class="menu-item">
-                                                <a class="active" href="{{route('main', app()->getLocale())}}">@lang("Headquarter")</a>
+                                                <a class="active" href="{{route('home', app()->getLocale())}}">@lang("Headquarter")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a  href="{{route('about', app()->getLocale())}}">@lang("About association")</a>
