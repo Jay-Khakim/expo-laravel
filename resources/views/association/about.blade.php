@@ -98,7 +98,7 @@
                                                 <a href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="sub-team1.php">@lang("Foreign divisions")</a>
+                                                <a href="{{route('foreign', app()->getLocale())}}">@lang("Foreign divisions")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="sub-team2.php">@lang("Scientific Research Center")</a>

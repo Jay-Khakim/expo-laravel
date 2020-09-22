@@ -59,4 +59,10 @@ class PageController extends Controller
 
         return view('association.territorial_devision')->with(compact('territorial_employers'));
     }
+
+    public function foreign(){
+        $foreign_employers= Staff::where('status', 'foreign')->paginate(5);
+
+        return view('association.foreign_division')->with(compact('foreign_employers'));
+    }
 }

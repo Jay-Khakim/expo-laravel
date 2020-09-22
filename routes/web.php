@@ -26,5 +26,6 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/about', 'PageController@about')->name('about');
     Route::get('/service', 'PageController@service')->name('service');
     Route::get('/territorial', 'PageController@territorial')->name('territorial');
+    Route::get('/foreign', 'PageController@foreign')->name('foreign');
 });
 

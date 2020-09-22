@@ -36,22 +36,22 @@
                 <div class="row">
                     <div class="flat-wrapper">
                         <div class="general flat-teammember">
-                            @foreach ($territorial_employers as $territorial)
+                            @foreach ($foreign_employers as $foreign)
                                 <div class="member">
                                     <div class="member-image">
-                                        <img src="/storage/{{$territorial->image}}" alt="{{$territorial->name}}">
+                                        <img src="/storage/{{$foreign->image}}" alt="{{$foreign->name}}">
                                     </div>
                                     <div class="member-info">
-                                        <h3 class="member-name">{{$territorial->name}}</h3><br>
-                                        <div class="member-subtitle">{{$territorial->branche->name}}</div><br>
-                                        <div class="member-subtitle">{{$territorial->position}}</div>
+                                        <h3 class="member-name">{{$foreign->name}}</h3><br>
+                                        <div class="member-subtitle">{{$foreign->branche->name}}</div><br>
+                                        <div class="member-subtitle">{{$foreign->position}}</div>
                                         <div class="member-desc">
-                                            <p>{{$territorial->reception_time}}</p>
+                                            <p>{{$foreign->reception_time}}</p>
                                         </div>
                                         <div class="social-links style1">
                                             <a href="
-                                                @if ($territorial->twitter)
-                                                    {{$territorial->twitter}}
+                                                @if ($foreign->twitter)
+                                                    {{$foreign->twitter}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -59,8 +59,8 @@
                                                 <i class="fa fa-twitter"></i>
                                             </a>
                                             <a href="
-                                                @if ($territorial->facebook)
-                                                    {{$territorial->facebook}}
+                                                @if ($foreign->facebook)
+                                                    {{$foreign->facebook}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -68,8 +68,8 @@
                                                 <i class="fa fa-facebook-official"></i>
                                             </a>
                                             <a href="
-                                                @if ($territorial->linkedin)
-                                                    {{$territorial->linkedin}}
+                                                @if ($foreign->linkedin)
+                                                    {{$foreign->linkedin}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -77,8 +77,8 @@
                                                 <i class="fa fa-linkedin"></i>
                                             </a>
                                             <a href="
-                                                @if ($territorial->email)
-                                                    {{$territorial->email}}
+                                                @if ($foreign->email)
+                                                    {{$foreign->email}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -89,7 +89,7 @@
                                     </div>
                                 </div><!-- /.member -->
                             @endforeach
-                            {{$territorial_employers->links()}} 
+                            {{$foreign_employers->links()}} 
                         </div><!-- /.flat-teammember -->
 
                         <div class="general-sidebar">
@@ -107,10 +107,10 @@
                                                 <a href="{{route('service', app()->getLocale())}}">@lang("Services")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a class="active" href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
+                                                <a  href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('foreign', app()->getLocale())}}">@lang("Foreign divisions")</a>
+                                                <a class="active" href="{{route('foreign', app()->getLocale())}}">@lang("Foreign divisions")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="sub-team2.php">@lang("Scientific Research Center")</a>
