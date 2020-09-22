@@ -55,7 +55,7 @@
                                     <li><a href="news.php">@lang("News")</a></li>
                                     <li><a href="#faq.php">@lang("Questions")</a></li>
                                     <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a></li>
-                                    <li><a href="services.php">@lang("Association activities")</a></li>
+                                    <li><a href="{{route('service', app()->getLocale())}}">@lang("Association activities")</a></li>
                                     <li><a href="sub-team1.php">@lang("Territorial divisions")</a></li>
                                     <li><a href="sub-team2.php">@lang("SRC")</a></li>
                                     <li><a href="join.php">@lang("Membership")</a></li>

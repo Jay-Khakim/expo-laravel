@@ -98,13 +98,13 @@
                                     <div class="widget widget_nav_menu">
                                         <ul class="nav_menu">
                                             <li class="menu-item">
-                                                <a class="active" href="{{route('home', app()->getLocale())}}">@lang("Headquarter")</a>
+                                                <a class="active" href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a  href="{{route('about', app()->getLocale())}}">@lang("About association")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="service.php">@lang("Services")</a>
+                                                <a href="{{route('service', app()->getLocale())}}">@lang("Services")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="sub-team.php">@lang("Territorial divisions")</a>

@@ -86,13 +86,13 @@
                                     <div class="widget widget_nav_menu">
                                         <ul class="nav_menu">
                                             <li class="menu-item">
-                                                <a class="" href="{{route('home', app()->getLocale())}}">@lang("Headquarter")</a>
+                                                <a class="" href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a class="active" href="{{route('about', app()->getLocale())}}">@lang("About association")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="service.php">@lang("Services")</a>
+                                                <a href="{{route('service', app()->getLocale())}}">@lang("Services")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="sub-team.php">@lang("Territorial divisions")</a>
@@ -120,7 +120,7 @@
                                                 <p>
                                                     <input type="submit" value="@lang('Download')">
                                                 </p>
-                                            </form>
+                                            </form>{{route('service', app()->getLocale())}}
                                         </div>
                                     </div><!-- /.widget_text -->
                                 </div><!-- /.sidebar -->
