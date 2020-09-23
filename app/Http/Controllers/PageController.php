@@ -84,4 +84,18 @@ class PageController extends Controller
         return view('membership.become_member');
     }
 
+    public function memberlist(){
+
+        $members = Membership::where('status', 'active')->paginate(8);
+        return view('membership.members-list')->with(compact('members'));
+    }
+
+    public function single($language, $slug_en){
+
+        $dt = Carbon::now();
+        $member = Membership::where('slug_en', $slug_en)->first();
+        // dd($member);
+        return view('membership.single-member')->with(compact('member', 'dt'));
+    }
+
 }

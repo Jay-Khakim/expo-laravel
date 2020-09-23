@@ -62,6 +62,19 @@ class Membership extends Model
         "created_at",
         'deleted_at'
     ];
+    protected $lang_fields =[
+        'name', 'desc', 'address', 
+    ];
+
+    public function __get($attribute){
+        if (in_array($attribute, $this->lang_fields)) { 
+            $localeSpecificAttribute = $attribute.'_'.app()->getLocale();
+            return $this->{$localeSpecificAttribute};
+        }   
+        return parent::__get($attribute);
+    }
+
+
 
     // public function uploadPdfToDisk($value, $attribute_name, $disk, $destination_path)
     // {   

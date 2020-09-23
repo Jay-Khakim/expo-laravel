@@ -68,7 +68,7 @@
                                     <li><a href="{{route('membership', app()->getLocale())}}">@lang("Membership")</a>
                                         <ul class="submenu"> 
                                             <li><a href="{{route('membership', app()->getLocale())}}">@lang("Become a member")</a></li>
-                                            <li><a href="join1.php">@lang("List of members")</a></li>
+                                            <li><a href="{{route('members-list', app()->getLocale())}}">@lang("List of members")</a></li>
                                             <li><a href="join3.php">@lang("Check for membership")</a></li>
                                             <li><a href="join2.php">@lang("Benefits")</a></li>
                                         </ul><!-- /.submenu -->
