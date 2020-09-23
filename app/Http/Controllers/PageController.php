@@ -14,7 +14,8 @@ use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class PageController extends Controller
-{
+{   
+    // Main
     public function index(){
         $category = Category::where('name_en', 'Main banner')->first();
         // dd($category->id);
@@ -40,6 +41,7 @@ class PageController extends Controller
         return view('index')->with(compact('banner_news', 'latests', 'right_side_latests', 'main_employers', 'territorial_employers'));
     }
 
+    // Assaciation
     public function headquater(){
 
         $main_employers= Staff::where('status', 'main')->paginate(5);
@@ -74,6 +76,12 @@ class PageController extends Controller
 
     public function docs(){
         return view('association.docs');
+    }
+
+    // Membership 
+
+    public function membership(){
+        return view('membership.become_member');
     }
 
 }

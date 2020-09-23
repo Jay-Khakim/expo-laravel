@@ -22,6 +22,8 @@ Route::group(['prefix' => '{language}'], function () {
     // Auth::routes();
 
     Route::get('/', 'PageController@index')->name('home');
+
+    // Association
     Route::get('/headquater', 'PageController@headquater')->name('headquater');
     Route::get('/about', 'PageController@about')->name('about');
     Route::get('/service', 'PageController@service')->name('service');
@@ -29,5 +31,8 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/foreign', 'PageController@foreign')->name('foreign');
     Route::get('/scientific', 'PageController@scientific')->name('scientific');
     Route::get('/docs', 'PageController@docs')->name('docs');
+
+    // Membership
+    Route::get('/membership', 'PageController@membership')->name('membership');
 });
 
