@@ -128,6 +128,14 @@
     "A MEMBER OF THE ASSOCIATION OF EXPORTS OF UZBEKISTAN": "ЧЛЕН АССОЦИАЦИИ ЭКСПОРТЕРОВ УЗБЕКИСТАНА",
     "THE MEMBERSHIP IS EXPIRED!": "ИСТЕКШИЙ ЧЛЕНСТВО",
     "Certificate": "Сертификат",
-    "Description": "Описание"
+    "Description": "Описание",
+    "Verification of membership in the association": "Проверка членства в ассоциации",
+    "Enter Tax Identification Number": "Введите идентификационный номер налогоплательщика",
+    "Check": "Проверить",
+    "Information on membership in the association": "Информация о членстве в ассоциации",
+    "Certificate status": "Статус сертификата",
+    "Active": "Активный",
+    "EXPIRED": "ИСТЕКШИЙ",
+    "Name of the legal entity member of the association": "Наименование юридического лица - члена ассоциации"
 
 }

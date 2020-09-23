@@ -130,7 +130,17 @@
     "A MEMBER OF THE ASSOCIATION OF EXPORTS OF UZBEKISTAN": "ЎЗБEКИСТОН ЭКСПОРТЧИЛАР УЮШМАСИ АЪЗОСИ ҲИСОБЛАНАДИ",
     "THE MEMBERSHIP IS EXPIRED!": "AЪЗОЛИК МУДДAТИ ТУГAГAН!",
     "Certificate": "Гувоҳнома",
-    "Description": "Маълумот"
+    "Description": "Маълумот",
+    "Verification of membership in the association": "Уюшмага аъзоликни текшириш",
+    "Enter Tax Identification Number": "СТИР кодини киритинг",
+    "Check": "Текшириш",
+    "Information on membership in the association": "Уюшмага аъзолик тоғрисида маълумот",
+    "Certificate status": "Гувоҳнома ҳолати",
+    "Active": "Актив",
+    "EXPIRED": "МУДДAТИ ТУГAГAН!",
+    "Name of the legal entity member of the association": "Уюшмага аъзо юридик шахс номи",
+    "based on information from": "кундаги маълумотга асосан"
+
 
 
 

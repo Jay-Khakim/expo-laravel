@@ -98,4 +98,18 @@ class PageController extends Controller
         return view('membership.single-member')->with(compact('member', 'dt'));
     }
 
+    public function checkmember(){
+        return view('membership.check-member');
+    }
+
+    public function check(){
+        $dt = Carbon::now();
+        $search_text = $_GET['check'];
+        $member = Membership::where('inn', 'LIKE', '%'.$search_text.'%')->get();
+        // dd($member);
+
+        return view('membership.check-member')->with(compact('member', 'dt'));
+    }
+
+
 }

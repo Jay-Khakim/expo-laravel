@@ -47,7 +47,7 @@
                             <p><strong>@lang("Expiry date"): </strong> <b>{{$member->expiry_date->format('Y-m-d')}}</b></p>
                         </div>
                         <div class="description">
-                            @if ($dt->format('Y-m-d') > $member->expiry_date->format('Y-m-d'))
+                            @if ($dt->format('Y-m-d') < $member->expiry_date->format('Y-m-d'))
                                 <p class="price">@lang("A MEMBER OF THE ASSOCIATION OF EXPORTS OF UZBEKISTAN")</p>
                             @else 
                                 <p class="price text-danger">@lang("THE MEMBERSHIP IS EXPIRED!")</p>

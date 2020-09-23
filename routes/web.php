@@ -36,5 +36,8 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/membership', 'PageController@membership')->name('membership');
     Route::get('/memberlist', 'PageController@memberlist')->name('members-list');
     Route::get('/memberlist/{slug_en}', 'PageController@single')->name('single-member');
+    Route::get('/checkmember', 'PageController@checkmember')->name('check-member');
+    Route::get('/check', 'PageController@check')->name('check');
+
 });
 
