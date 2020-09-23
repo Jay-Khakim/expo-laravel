@@ -71,4 +71,9 @@ class PageController extends Controller
 
         return view('association.scientific_division')->with(compact('scientific_employers'));
     }
+
+    public function docs(){
+        return view('association.docs');
+    }
+
 }

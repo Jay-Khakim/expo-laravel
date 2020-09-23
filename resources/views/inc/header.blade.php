@@ -61,7 +61,7 @@
                                             <li><a href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a></li>
                                             <li><a href="{{route('foreign', app()->getLocale())}}">@lang("Foreign divisions")</a></li>
                                             <li><a href="{{route('scientific', app()->getLocale())}}">@lang("Scientific Research Center")</a></li>
-                                            <li><a href="docs.php">@lang("Normative documents")</a></li>
+                                            <li><a href="{{route('docs', app()->getLocale())}}">@lang("Normative documents")</a></li>
                                             
                                         </ul><!-- /.submenu -->
                                     </li>

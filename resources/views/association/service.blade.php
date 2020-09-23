@@ -174,7 +174,7 @@
                                                 <a href="{{route('scientific', app()->getLocale())}}">@lang("Scientific Research Center")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="docs.php">@lang("Normative documents")</a>
+                                                <a href="{{route('docs', app()->getLocale())}}">@lang("Normative documents")</a>
                                             </li>
                                         </ul>
                                     </div><!-- /.widget_nav_menu -->
