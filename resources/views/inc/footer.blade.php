@@ -57,7 +57,7 @@
                                     <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a></li>
                                     <li><a href="{{route('service', app()->getLocale())}}">@lang("Association activities")</a></li>
                                     <li><a href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a></li>
-                                    <li><a href="sub-team2.php">@lang("SRC")</a></li>
+                                    <li><a href="{{route('scientific', app()->getLocale())}}">@lang("SRC")</a></li>
                                     <li><a href="join.php">@lang("Membership")</a></li>
                                     <li><a href="#portfolio.php">@lang("New projects")</a></li>
                                     <li><a href="media1.php">@lang("Media")</a></li>

@@ -27,5 +27,6 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/service', 'PageController@service')->name('service');
     Route::get('/territorial', 'PageController@territorial')->name('territorial');
     Route::get('/foreign', 'PageController@foreign')->name('foreign');
+    Route::get('/scientific', 'PageController@scientific')->name('scientific');
 });
 

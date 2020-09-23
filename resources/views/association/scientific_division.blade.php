@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('language')
     <li>
-        <a href="{{route('territorial', 'en') }}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
+        <a href="{{route('scientific', 'en') }}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
     </li>
     <li>
-        <a href="{{route('territorial', 'ru') }}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
+        <a href="{{route('scientific', 'ru') }}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
     </li>
     <li>
-        <a href="{{route('territorial', 'uz') }}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
+        <a href="{{route('scientific', 'uz') }}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
     </li>
 @endsection
 
@@ -22,7 +22,7 @@
                             <ul class="trail-items">
                                 <li class="trail-item"><a href="{{route('home', app()->getLocale())}}">@lang("Main")</a></li>
                                 <li class="trail-item"><a href="{{route('about', app()->getLocale())}}">@lang('Association')</a></li>
-                                <li class="trail-end">@lang("Territorial divisions")</li>
+                                <li class="trail-end">@lang("Scientific Research Center")</li>
                             </ul>                   
                         </div>
                     </div><!-- /.page-title-captions -->                        
@@ -36,22 +36,22 @@
                 <div class="row">
                     <div class="flat-wrapper">
                         <div class="general flat-teammember">
-                            @foreach ($territorial_employers as $territorial)
+                            @foreach ($scientific_employers as $scientific)
                                 <div class="member">
                                     <div class="member-image">
-                                        <img src="/storage/{{$territorial->image}}" alt="{{$territorial->name}}">
+                                        <img src="/storage/{{$scientific->image}}" alt="{{$scientific->name}}">
                                     </div>
                                     <div class="member-info">
-                                        <h3 class="member-name">{{$territorial->name}}</h3><br>
-                                        <div class="member-subtitle">{{$territorial->branche->name}}</div><br>
-                                        <div class="member-subtitle">{{$territorial->position}}</div>
+                                        <h3 class="member-name">{{$scientific->name}}</h3><br>
+                                        <div class="member-subtitle">{{$scientific->branche->name}}</div><br>
+                                        <div class="member-subtitle">{{$scientific->position}}</div>
                                         <div class="member-desc">
-                                            <p>{{$territorial->reception_time}}</p>
+                                            <p>{{$scientific->reception_time}}</p>
                                         </div>
                                         <div class="social-links style1">
                                             <a href="
-                                                @if ($territorial->twitter)
-                                                    {{$territorial->twitter}}
+                                                @if ($scientific->twitter)
+                                                    {{$scientific->twitter}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -59,8 +59,8 @@
                                                 <i class="fa fa-twitter"></i>
                                             </a>
                                             <a href="
-                                                @if ($territorial->facebook)
-                                                    {{$territorial->facebook}}
+                                                @if ($scientific->facebook)
+                                                    {{$scientific->facebook}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -68,8 +68,8 @@
                                                 <i class="fa fa-facebook-official"></i>
                                             </a>
                                             <a href="
-                                                @if ($territorial->linkedin)
-                                                    {{$territorial->linkedin}}
+                                                @if ($scientific->linkedin)
+                                                    {{$scientific->linkedin}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -77,8 +77,8 @@
                                                 <i class="fa fa-linkedin"></i>
                                             </a>
                                             <a href="
-                                                @if ($territorial->email)
-                                                    {{$territorial->email}}
+                                                @if ($scientific->email)
+                                                    {{$scientific->email}}
                                                 @else 
                                                     javascript:void(0)
                                                 @endif
@@ -89,7 +89,7 @@
                                     </div>
                                 </div><!-- /.member -->
                             @endforeach
-                            {{$territorial_employers->links()}} 
+                            {{$scientific_employers->links()}} 
                         </div><!-- /.flat-teammember -->
 
                         <div class="general-sidebar">
@@ -107,13 +107,13 @@
                                                 <a href="{{route('service', app()->getLocale())}}">@lang("Services")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a class="active" href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
+                                                <a  href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('foreign', app()->getLocale())}}">@lang("Foreign divisions")</a>
+                                                <a  href="{{route('foreign', app()->getLocale())}}">@lang("Foreign divisions")</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('scientific', app()->getLocale())}}">@lang("Scientific Research Center")</a>
+                                                <a class="active" href="{{route('scientific', app()->getLocale())}}">@lang("Scientific Research Center")</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="docs.php">@lang("Normative documents")</a>

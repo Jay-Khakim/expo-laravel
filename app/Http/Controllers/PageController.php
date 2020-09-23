@@ -65,4 +65,10 @@ class PageController extends Controller
 
         return view('association.foreign_division')->with(compact('foreign_employers'));
     }
+
+    public function scientific(){
+        $scientific_employers= Staff::where('status', 'sud')->paginate(5);
+
+        return view('association.scientific_division')->with(compact('scientific_employers'));
+    }
 }
