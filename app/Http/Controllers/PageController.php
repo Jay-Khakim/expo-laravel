@@ -111,5 +111,8 @@ class PageController extends Controller
         return view('membership.check-member')->with(compact('member', 'dt'));
     }
 
+    public function benefits(){
+        return view('membership.benefits');
+    }
 
 }

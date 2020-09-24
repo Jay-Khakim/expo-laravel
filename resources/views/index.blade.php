@@ -235,7 +235,7 @@
                     <div class="flat-wrapper">
                         <div class="flat-title-button">
                             <h3 class="title"><i class="fa fa-line-chart"></i>@lang("Activities of the Association")</h3>
-                            <p><a class="button sm" href="join2.php">@lang("See all")</a></p>
+                            <p><a class="button sm" href="{{route('benefits', app()->getLocale())}}">@lang("See all")</a></p>
                         </div>
                     </div><!-- /.flat-wrapper -->
                 </div><!-- /.row -->
