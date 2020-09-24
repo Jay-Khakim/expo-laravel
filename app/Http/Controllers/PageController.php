@@ -115,4 +115,8 @@ class PageController extends Controller
         return view('membership.benefits');
     }
 
+    public function memservice(){
+        return view('membership.members-service');
+    }
+
 }

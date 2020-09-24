@@ -71,6 +71,7 @@
                                             <li><a href="{{route('members-list', app()->getLocale())}}">@lang("List of members")</a></li>
                                             <li><a href="{{route('check-member', app()->getLocale())}}">@lang("Check for membership")</a></li>
                                             <li><a href="{{route('benefits', app()->getLocale())}}">@lang("Benefits")</a></li>
+                                            <li><a href="{{route('members-service', app()->getLocale())}}">@lang("Services")</a></li>
                                         </ul><!-- /.submenu -->
                                     </li>
                                     <li><a href="news.php">@lang("The press")</a>
