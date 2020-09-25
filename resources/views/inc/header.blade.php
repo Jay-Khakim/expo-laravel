@@ -74,9 +74,9 @@
                                             <li><a href="{{route('members-service', app()->getLocale())}}">@lang("Services")</a></li>
                                         </ul><!-- /.submenu -->
                                     </li>
-                                    <li><a href="news.php">@lang("The press")</a>
+                                    <li><a href="{{route('news', app()->getLocale())}}">@lang("The press")</a>
                                         <ul class="submenu">
-                                            <li><a href="news.php">@lang("News")</a></li>
+                                            <li><a href="{{route('news', app()->getLocale())}}">@lang("News")</a></li>
                                             <li><a href="#news1.php">@lang("Articles")</a></li>
                                             <li><a href="#news2.php">@lang("Press release")</a></li>
                                             <li><a href="#news3.php">@lang("Events")</a></li>

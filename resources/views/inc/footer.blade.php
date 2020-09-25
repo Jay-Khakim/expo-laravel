@@ -52,7 +52,7 @@
                             <div class="menu-footer-menu-container">
                                 <ul class="ft-menu">
                                     <li><a href="{{route('about', app()->getLocale())}}">@lang("About us")</a></li>
-                                    <li><a href="news.php">@lang("News")</a></li>
+                                    <li><a href="{{route('news', app()->getLocale())}}">@lang("News")</a></li>
                                     <li><a href="#faq.php">@lang("Questions")</a></li>
                                     <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a></li>
                                     <li><a href="{{route('service', app()->getLocale())}}">@lang("Association activities")</a></li>

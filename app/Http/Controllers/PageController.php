@@ -119,4 +119,67 @@ class PageController extends Controller
         return view('membership.members-service');
     }
 
+    // News
+
+    public function news(){
+
+        $latests = News::where('type', 'news')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->take(4)
+        ->get();
+
+        $id = count(News::all());
+        
+        $mains = News::where('type', 'news')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->skip(4)
+        ->take($id-4)
+        ->paginate(2);
+
+        return view('news.news')->with(compact('latests','mains'));
+    }
+
+    public function singlenews($language, $slug_en){
+
+        $dt = Carbon::now();
+        $single = News::where('slug_en', $slug_en)->first();
+
+        $latests = News::where('type', 'news')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->take(4)
+        ->get();
+
+        // dd($member);
+        return view('news.single-news')->with(compact('single', 'dt', 'latests'));
+    }
+
+    public function categorynews($language, $slug_en){
+
+        $dt = Carbon::now();
+
+        $id = Category::where('slug_en', $slug_en)->first();
+        // dd($id);
+        $mains = News::where('type', 'news')
+        ->where('category_id', $id->id)
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        // ->skip(4)
+        // ->take($id-4)
+        ->paginate(2);
+
+        // $single = News::where('slug_en', $slug_en)->first();
+
+        $latests = News::where('type', 'news')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->take(4)
+        ->get();
+
+        // dd($member);
+        return view('news.category-news')->with(compact( 'dt', 'id', 'latests', 'mains'));
+    }
+
 }
