@@ -97,13 +97,13 @@
                                         </div><!-- /.entry-header -->
 
                                         <div class="entry-cover">
-                                            <a href="#21">
-                                                <img src="/storage/{{$single->image1}}" alt="{{$single->title}}">
+                                            <a href="javascript:void(0)">
+                                                <img style="width:100%" src="/storage/{{$single->image1}}" alt="{{$single->title}}">
                                             </a>
                                         </div><!-- /.entry-cover -->
 
                                         <div class="entry-content">
-                                            <p> {{$single->intro}} </p>
+                                            <p> {!!$single->intro!!} </p>
                                             @if ($single->image2)
                                                 <div class="entry-cover">
                                                     <a href="#21">
@@ -113,7 +113,7 @@
                                             @endif
                                             <div class="general-text">
                                                 <p>
-                                                    <strong> {{$single->highlighted}}</strong>
+                                                    <strong> {!!$single->highlighted!!}</strong>
                                                 </p>
                                                 @if ($single->image3)
                                                     <div class="entry-cover">
@@ -124,7 +124,7 @@
                                                 @endif
                                                 @if ($single->body)
                                                     <ul class="flat-list style1 style2">
-                                                        <li> {{$single->body}} </li>  
+                                                        <li> {!!$single->body!!} </li>  
                                                     </ul>
                                                 @endif
                                                 <div class="flat-divider d30px"></div>
@@ -135,7 +135,7 @@
                                                         </a>
                                                     </div><!-- /.entry-cover -->
                                                 @endif
-                                                <p> {{$single->conclusion}} </p>                                
+                                                <p> {!!$single->conclusion!!} </p>                                
                                             </div>
                                         </div><!-- /.entry-content -->
                                     </div><!-- /.entry-wrapper -->
@@ -152,7 +152,7 @@
                                     <ul>
                                         @foreach ($latests as $last)
                                             <li>
-                                                <a href="#"> {{$last->title}} </a>
+                                                <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"> {{$last->title}} </a>
                                                 <span class="post-date">
                                                     @if ($last->created_at->format('m') == 1)
                                                         @lang("Jan")
