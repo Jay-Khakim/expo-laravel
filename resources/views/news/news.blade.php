@@ -190,7 +190,7 @@
                                     <ul>
                                         <li><a href="{{route('category-news', [app()->getLocale(), 'export'])}}">@lang("Export news")</a></li>
                                         <li><a href="{{route('category-news', [app()->getLocale(), 'import-news'])}}">@lang("Import news")</a></li>
-                                        <li><a href="#">@lang("Official Meetings")</a></li>
+                                        <li><a href="{{route('events', app()->getLocale())}}">@lang("Official Meetings")</a></li>
                                         <li><a href="{{route('category-news', [app()->getLocale(), 'association'])}}">@lang("Association news")</a></li>
                                     </ul>
                                 </div><!-- /.widget_categories -->

@@ -77,14 +77,14 @@
                                     <li><a href="{{route('news', app()->getLocale())}}">@lang("The press")</a>
                                         <ul class="submenu">
                                             <li><a href="{{route('news', app()->getLocale())}}">@lang("News")</a></li>
-                                            <li><a href="#news1.php">@lang("Articles")</a></li>
-                                            <li><a href="#news2.php">@lang("Press release")</a></li>
-                                            <li><a href="#news3.php">@lang("Events")</a></li>
+                                            {{-- <li><a href="#news1.php">@lang("Articles")</a></li> --}}
+                                            <li><a href="{{route('press', app()->getLocale())}}">@lang("Press release")</a></li>
+                                            <li><a href="{{route('events', app()->getLocale())}}">@lang("Events")</a></li>
                                         </ul><!-- /.submenu -->
                                     </li>    
-                                    <li><a href="javascript:void(0)">@lang("Information")</a>
+                                    <li><a href="{{route('statistics', app()->getLocale())}}">@lang("Information")</a>
                                         <ul class="submenu">
-                                            <li><a href="data.php">@lang("Statistics")</a></li>
+                                            <li><a href="{{route('statistics', app()->getLocale())}}">@lang("Statistics")</a></li>
                                             <li><a href="#data1.php">@lang("Open data")</a></li>
                                         </ul><!-- /.submenu -->
                                     </li>

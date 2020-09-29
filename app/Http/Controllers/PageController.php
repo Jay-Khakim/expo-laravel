@@ -19,18 +19,25 @@ class PageController extends Controller
     public function index(){
         $category = Category::where('name_en', 'Main banner')->first();
         // dd($category->id);
-        $banner_news = News::where('category_id', $category->id)
-        ->orderBy("id", "desc")
-        ->take(4)
-        ->get();
-        
-        $latests = News::where('category_id', '>', $category->id)
+        $banner_news = News::where('type', 'news')
+        ->where('media_type', 'article')
         ->orderBy("id", "desc")
         ->take(2)
         ->get();
+        
+        $id = count(News::all());
 
-        $right_side_latests = News::where('category_id', '>', $category->id+1)
+        $latests = News::where('type', 'news')
+        ->where('media_type', 'article')
         ->orderBy("id", "desc")
+        ->skip(2)
+        ->take(2)
+        ->get();
+        // dd($latests);
+        $right_side_latests = News::where('type', 'news')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->skip(4)
         ->take(4)
         ->get();
         // dd($banner_news);
@@ -180,6 +187,29 @@ class PageController extends Controller
 
         // dd($member);
         return view('news.category-news')->with(compact( 'dt', 'id', 'latests', 'mains'));
+    }
+
+    public function events(){
+        $news = News::where('type', 'event')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->paginate(6);
+
+        return view('news.events')->with(compact('news'));
+    } 
+
+    public function press(){
+        $news = News::where('type', 'pressreliese')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->paginate(4);
+
+        return view('news.press')->with(compact('news'));
+    } 
+
+    //Information 
+    public function statistics(){
+        return view('information.statistics');
     }
 
 }

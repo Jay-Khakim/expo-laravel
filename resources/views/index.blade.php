@@ -174,12 +174,12 @@
                                         </div>
                                         <div class="box-header">
                                             <h5 class="box-title">
-                                                <a href="m-news.php">@lang("About the Chairman of the Board")</a>
+                                                <a href="{{route('category-news', [app()->getLocale(), 'Mukhtor-Umarov'])}}">@lang("About the Chairman of the Board")</a>
                                             </h5>
                                         </div>
                                         <div class="box-content">
                                             <div class="box-desc">@lang("All news about Mukhtor Umarov, the chairman of the Association of Exporters of Uzbekistan.")</div>
-                                            <a class="button style1" href="m-news.php">@lang("More")</a>
+                                            <a class="button style1" href="{{route('category-news', [app()->getLocale(), 'Mukhtor-Umarov'])}}">@lang("More")</a>
                                         </div>
                                     </div>
                                 </div><!-- /.imagebox -->
@@ -193,12 +193,12 @@
                                         </div>
                                         <div class="box-header">
                                             <h5 class="box-title">
-                                                <a href="news.php">@lang("Association news")</a>
+                                                <a href="{{route('category-news', [app()->getLocale(), 'association'])}}">@lang("Association news")</a>
                                             </h5>
                                         </div>
                                         <div class="box-content">
                                             <div class="box-desc">@lang("All news about the Association of Exporters of Uzbekistan")</div>
-                                            <a class="button style1" href="news.php">@lang("More")</a>
+                                            <a class="button style1" href="{{route('category-news', [app()->getLocale(), 'association'])}}">@lang("More")</a>
                                         </div>
                                     </div>
                                 </div><!-- /.imagebox -->
@@ -212,12 +212,12 @@
                                         </div>
                                         <div class="box-header">
                                             <h5 class="box-title">
-                                                <a href="news.php">@lang('Official Meetings')</a>
+                                                <a href="{{route('events', app()->getLocale())}}">@lang('Official Meetings')</a>
                                             </h5>
                                         </div>
                                         <div class="box-content">
                                             <div class="box-desc">@lang("About official meetings of the Association of Exporters of Uzbekistan.")</div>
-                                            <a class="button style1" href="news.php">@lang("More")</a>
+                                            <a class="button style1" href="{{route('events', app()->getLocale())}}">@lang("More")</a>
                                         </div>
                                     </div>
                                 </div><!-- /.imagebox -->

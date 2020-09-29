@@ -45,6 +45,14 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/news', 'PageController@news')->name('news');
     Route::get('/news/{slug_en}', 'PageController@singlenews')->name('single-news');
     Route::get('/news/category/{slug_en}', 'PageController@categorynews')->name('category-news');
+    Route::get('/events', 'PageController@events')->name('events');
+    Route::get('/press', 'PageController@press')->name('press');
+
+    //Information 
+    Route::get('/statistics', 'PageController@statistics')->name('statistics');
+
+
+
 
 
 });
