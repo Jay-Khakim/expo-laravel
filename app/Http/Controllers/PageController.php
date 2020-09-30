@@ -224,7 +224,7 @@ class PageController extends Controller
 
         $videos = News::where('media_type', 'video')
         ->orderBy('id', 'desc')
-        ->paginate(1);
+        ->paginate(5);
         return view('media.video')->with(compact('latests', 'videos'));
     }
 }

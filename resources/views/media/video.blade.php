@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('language')
     <li>
-        <a href="{{route('benefits', 'en') }}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
+        <a href="{{route('video', 'en') }}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
     </li>
     <li>
-        <a href="{{route('benefits', 'ru') }}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
+        <a href="{{route('video', 'ru') }}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
     </li>
     <li>
-        <a href="{{route('benefits', 'uz') }}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
+        <a href="{{route('video', 'uz') }}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
     </li>
 @endsection
 
