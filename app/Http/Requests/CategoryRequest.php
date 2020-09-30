@@ -29,7 +29,7 @@ class CategoryRequest extends FormRequest
             'name_en' => 'required|min:2|max:255',
             'name_uz' => 'required|min:2|max:255',
             'name_ru' => 'required|min:2|max:255',
-            // 'slug_en' => 'required|min:2|max:255',
+            'slug_en' => 'required|min:2|max:255',
         ];
     }
 

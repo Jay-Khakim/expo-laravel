@@ -31,7 +31,7 @@ class NewsRequest extends FormRequest
             'title_en' => 'required|min:2|max:500',
             'title_ru' => 'required|min:2|max:500',
             'title_uz' => 'required|min:2|max:500',
-            // 'slug_uz' => 'required|min:2|max:500',
+            'slug_en' => 'required|min:2|max:500',
             'intro_en' => 'required|min:2|max:2500',
             'intro_ru' => 'required|min:2|max:2500',
             'intro_uz' => 'required|min:2|max:2500',
