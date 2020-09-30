@@ -60,9 +60,9 @@
                                     <li><a href="{{route('scientific', app()->getLocale())}}">@lang("SRC")</a></li>
                                     <li><a href="{{route('membership', app()->getLocale())}}">@lang("Membership")</a></li>
                                     <li><a href="#portfolio.php">@lang("New projects")</a></li>
-                                    <li><a href="media1.php">@lang("Media")</a></li>
+                                    <li><a href="{{route('photo', app()->getLocale())}}">@lang("Media")</a></li>
                                     <li><a href="contact.php">@lang("Contacts")</a></li>
-                                    <li><a href="media1.php">@lang("Video messages")</a></li>
+                                    <li><a href="{{route('video', app()->getLocale())}}">@lang("Video messages")</a></li>
                                 </ul>
                             </div>
                         </div>

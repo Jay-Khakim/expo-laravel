@@ -90,7 +90,7 @@
                                     </li>
                                     <li><a href="{{route('video', app()->getLocale())}}">@lang("Media")</a>
                                         <ul class="submenu"> 
-                                            <li><a href="#media.php">@lang("Gallery")</a></li>
+                                            <li><a href="{{route('photo', app()->getLocale())}}">@lang("Gallery")</a></li>
                                             <li><a href="{{route('video', app()->getLocale())}}">@lang("Video")</a></li>
                                             <li><a href="#media2.php">@lang("Infographics")</a></li>
                                         </ul><!-- /.submenu -->

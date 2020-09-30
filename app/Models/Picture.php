@@ -33,6 +33,18 @@ class Picture extends Model
         'id' => 'integer',
     ];
 
+     protected $lang_fields =[
+       'name'
+    ];
+
+    public function __get($attribute){
+        if (in_array($attribute, $this->lang_fields)) { 
+            $localeSpecificAttribute = $attribute.'_'.app()->getLocale();
+            return $this->{$localeSpecificAttribute};
+        }   
+        return parent::__get($attribute);
+    }
+
 
     public function setImageAttribute($value)
     {

@@ -227,4 +227,11 @@ class PageController extends Controller
         ->paginate(5);
         return view('media.video')->with(compact('latests', 'videos'));
     }
+
+    public function photo(){
+
+        $photos = Picture::orderBy("id", "desc")
+        ->paginate(8);
+        return view('media.photo')->with(compact('photos'));
+    }
 }
