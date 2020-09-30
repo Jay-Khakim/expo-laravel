@@ -234,4 +234,9 @@ class PageController extends Controller
         ->paginate(8);
         return view('media.photo')->with(compact('photos'));
     }
+
+    // Contacts
+    public function contact(){
+        return view('contact');
+    }
 }

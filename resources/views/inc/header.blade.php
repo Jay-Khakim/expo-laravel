@@ -92,10 +92,10 @@
                                         <ul class="submenu"> 
                                             <li><a href="{{route('photo', app()->getLocale())}}">@lang("Gallery")</a></li>
                                             <li><a href="{{route('video', app()->getLocale())}}">@lang("Video")</a></li>
-                                            <li><a href="#media2.php">@lang("Infographics")</a></li>
+                                            {{-- <li><a href="#media2.php">@lang("Infographics")</a></li> --}}
                                         </ul><!-- /.submenu -->
                                     </li>                                            
-                                    <li><a href="contact.php">@lang("Contacts") </a></li>
+                                    <li><a href="{{route('contact', app()->getLocale())}}">@lang("Contacts") </a></li>
                                 </ul><!-- /.menu -->
                             </nav><!-- /.mainnav -->  
                         </div><!-- /.nav-wrap -->
