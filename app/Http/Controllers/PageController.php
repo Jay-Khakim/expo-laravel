@@ -212,4 +212,19 @@ class PageController extends Controller
         return view('information.statistics');
     }
 
+
+    //Media
+    public function video(){
+
+        $latests = News::where('type', 'news')
+        ->where('media_type', 'article')
+        ->orderBy("id", "desc")
+        ->take(4)
+        ->get();
+
+        $videos = News::where('media_type', 'video')
+        ->orderBy('id', 'desc')
+        ->paginate(1);
+        return view('media.video')->with(compact('latests', 'videos'));
+    }
 }

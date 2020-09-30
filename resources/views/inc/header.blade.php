@@ -85,13 +85,13 @@
                                     <li><a href="{{route('statistics', app()->getLocale())}}">@lang("Information")</a>
                                         <ul class="submenu">
                                             <li><a href="{{route('statistics', app()->getLocale())}}">@lang("Statistics")</a></li>
-                                            <li><a href="#data1.php">@lang("Open data")</a></li>
+                                            <li><a href="javascript:void(0)">@lang("Open data")</a></li>
                                         </ul><!-- /.submenu -->
                                     </li>
-                                    <li><a href="media1.php">@lang("Media")</a>
+                                    <li><a href="{{route('video', app()->getLocale())}}">@lang("Media")</a>
                                         <ul class="submenu"> 
                                             <li><a href="#media.php">@lang("Gallery")</a></li>
-                                            <li><a href="media1.php">@lang("Video")</a></li>
+                                            <li><a href="{{route('video', app()->getLocale())}}">@lang("Video")</a></li>
                                             <li><a href="#media2.php">@lang("Infographics")</a></li>
                                         </ul><!-- /.submenu -->
                                     </li>                                            
