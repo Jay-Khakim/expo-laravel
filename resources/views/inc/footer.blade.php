@@ -53,15 +53,15 @@
                                 <ul class="ft-menu">
                                     <li><a href="{{route('about', app()->getLocale())}}">@lang("About us")</a></li>
                                     <li><a href="{{route('news', app()->getLocale())}}">@lang("News")</a></li>
-                                    <li><a href="#faq.php">@lang("Questions")</a></li>
+                                    <li><a href="{{route('faq', app()->getLocale())}}">@lang("FAQ")</a></li>
                                     <li><a href="{{route('headquater', app()->getLocale())}}">@lang("Headquarter")</a></li>
                                     <li><a href="{{route('service', app()->getLocale())}}">@lang("Association activities")</a></li>
                                     <li><a href="{{route('territorial', app()->getLocale())}}">@lang("Territorial divisions")</a></li>
                                     <li><a href="{{route('scientific', app()->getLocale())}}">@lang("SRC")</a></li>
                                     <li><a href="{{route('membership', app()->getLocale())}}">@lang("Membership")</a></li>
-                                    <li><a href="#portfolio.php">@lang("New projects")</a></li>
+                                    <li><a href="javascri[pt:void(0)">@lang("New projects")</a></li>
                                     <li><a href="{{route('photo', app()->getLocale())}}">@lang("Media")</a></li>
-                                    <li><a href="contact.php">@lang("Contacts")</a></li>
+                                    <li><a href="{{route('contact', app()->getLocale())}}">@lang("Contacts")</a></li>
                                     <li><a href="{{route('video', app()->getLocale())}}">@lang("Video messages")</a></li>
                                 </ul>
                             </div>

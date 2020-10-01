@@ -85,7 +85,7 @@
                                     <li><a href="{{route('statistics', app()->getLocale())}}">@lang("Information")</a>
                                         <ul class="submenu">
                                             <li><a href="{{route('statistics', app()->getLocale())}}">@lang("Statistics")</a></li>
-                                            <li><a href="javascript:void(0)">@lang("Open data")</a></li>
+                                            {{-- <li><a href="javascript:void(0)">@lang("Open data")</a></li> --}}
                                         </ul><!-- /.submenu -->
                                     </li>
                                     <li><a href="{{route('video', app()->getLocale())}}">@lang("Media")</a>

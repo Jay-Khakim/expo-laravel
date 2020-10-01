@@ -239,4 +239,9 @@ class PageController extends Controller
     public function contact(){
         return view('contact');
     }
+
+    // FAQ
+    public function faq(){
+        return view('faq');
+    }
 }

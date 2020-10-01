@@ -58,6 +58,10 @@ Route::group(['prefix' => '{language}'], function () {
     // Contacts
     Route::get('/contact', 'PageController@contact')->name('contact');
 
+    // FAQ 
+    Route::get('/faq', 'PageController@faq')->name('faq');
+
+
 
 
 
