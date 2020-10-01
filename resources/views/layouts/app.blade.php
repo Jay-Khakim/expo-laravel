@@ -20,8 +20,19 @@
     @yield('css')
 
     {{-- Jot form --}}
-    <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"> new JotformFeedback({ formId: "202573195115452", buttonText: "@lang('Membership.')", base: "https://form.jotform.com/", background: "#1CBAC8", fontColor: "#FFFFFF", buttonSide: "right", buttonAlign: "center", type: false, width: 700, height: 500, isCardForm: false }); 
+    @if (app()->getLocale() === 'en')()
+        <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"> new JotformFeedback({ formId: "202652118441447", buttonText: "@lang('Membership.')", base: "https://form.jotform.com/", background: "#1CBAC8", fontColor: "#FFFFFF", buttonSide: "right", buttonAlign: "center", type: false, width: 700, height: 500, isCardForm: false }); 
     </script>
+    @endif
+    @if (app()->getLocale() === 'uz')
+        <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"> new JotformFeedback({ formId: "202573195115452", buttonText: "@lang('Membership.')", base: "https://form.jotform.com/", background: "#1CBAC8", fontColor: "#FFFFFF", buttonSide: "right", buttonAlign: "center", type: false, width: 700, height: 500, isCardForm: false }); 
+    </script>
+    @endif
+    @if(app()->getLocale() === 'ru')
+        <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"> new JotformFeedback({ formId: "202651416750450", buttonText: "@lang('Membership.')", base: "https://form.jotform.com/", background: "#1CBAC8", fontColor: "#FFFFFF", buttonSide: "right", buttonAlign: "center", type: false, width: 700, height: 500, isCardForm: false }); 
+    </script>
+    @endif
+    
 
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}" defer></script>  --}}
