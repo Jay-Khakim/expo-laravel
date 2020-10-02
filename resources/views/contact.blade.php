@@ -122,7 +122,8 @@
                 </div><!-- /.col-md-4 -->
 
                 <div class="col-md-8">
-                    <form id="contactform" method="post" action="./contact/contact-process.php">
+                    <form id="contactform" method="post" action="{{route("contacts-store", app()->getLocale())}}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <span><input name="name" type="text" value="" placeholder="@lang('Name')" required="required"></span>
@@ -130,10 +131,16 @@
                                 <span><input id="phone" name="phone" type="text" value="" placeholder="@lang('Phone')" required="required"></span>
                                 <span><input id="subject" name="subject" type="text" value="" placeholder="@lang('Subject')" required="required"></span>                                
                             </div><!-- /.col-md-6 -->
+                            @if (Session::has('flash_message'))
+                                <div class="alert alert-success">
+                                    {{Session::get('flash_message')}}
+                                </div>
+                            @endif
 
                             <div class="col-md-6">
                                 <span><textarea name="message" placeholder="@lang('Comment')" required="required"></textarea></span>
-                                <span class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="@lang('Send')">
+                                <button class="form-submit" name="submit" type="submit" id="submit" value="submit">@lang('Send')</button>
+                                {{-- <span class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="submit" placeholder="@lang('Send')"> --}}
                                 </span>
                             </div><!-- /.col-md-6 -->
                         </div><!-- /.row -->

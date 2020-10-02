@@ -12,6 +12,7 @@ use App\Models\Picture;
 use App\Models\Staff;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Mail;
 
 class PageController extends Controller
 {   
@@ -238,6 +239,27 @@ class PageController extends Controller
     // Contacts
     public function contact(){
         return view('contact');
+    }
+
+    public function store(Request $request){
+        dd($request->all());
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone'=>'required',
+            "subject" => 'required',
+            "message"=> "required"
+        ]);
+
+        Mail::send('contact-message', [
+            'msg' =>$request->message
+        ], function ($mail) use($request){
+            $mail-> from($request->email, $request->name);
+
+            $mail -> to('info@exportuz.com')->subject($request->subject);
+        });
+
+        return redirect()->back()->with('flash_message', 'Message has been sent successfully!');
     }
 
     // FAQ
