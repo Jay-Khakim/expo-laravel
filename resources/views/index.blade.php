@@ -572,6 +572,133 @@
             </div><!-- /.container -->
         </div><!-- /.flat-row -->
 
+        <div class="flat-row">
+            <div class="container">
+                <div class="row">
+                    <div class="flat-wrapper">
+                        <div class="flat-title-button">
+                            <h3 class="title"><i class="fa fa-2x fa-user-plus"></i>@lang("Foreign partners")</h3>
+                        </div>
+                    </div><!-- /.flat-wrapper -->
+                </div><!-- /.row -->
+
+                <div class="flat-divider d35px"></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="flat-testimonial">
+                            <div class="testimonial">
+                                <div class="testimonial-image">
+                                    <a href="https://rcci.org.pk/"><img src="/images/fpartners/1.jpg" alt="images"></a>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-author">
+                                            <a href="https://rcci.org.pk/"><strong class="author-name">AACCI</strong></a><br>
+                                            <div class="author-info">
+                                                <a href="https://rcci.org.pk/"><span class="subtitle">@lang("Asian-African Chamber of Commerce & Industry")</span></a>
+                                                <!-- <span class="divider">-</span>
+                                                 <a href="#" class="company">Unified</a> --> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.testimonial -->
+
+                            <div class="testimonial">
+                                <div class="testimonial-image">
+                                    <a href="http://www.ascame.org/"><img src="/images/fpartners/2.jpg" alt="images"></a>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-author">
+                                            <a href="http://www.ascame.org/"><strong class="author-name">RCCI</strong></a><br>
+                                            <div class="author-info">
+                                                <a href="http://www.ascame.org/"><span class="subtitle">@lang("Rawalpindi Chamber of Commerce and Industry")</span></a>
+                                                <!-- <span class="divider">-</span>
+                                                <a href="#" class="company">Unified</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial-image">
+                                    <a href="http://www.ascame.org/"><img src="/images/fpartners/3.jpg" alt="images"></a>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-author">
+                                            <a href="http://www.ascame.org/"><strong class="author-name">ASCAME</strong></a><br>
+                                            <div class="author-info">
+                                                <a href="http://www.ascame.org/"><span class="subtitle">@lang("The Association of the Mediterranean Chambers of Commerce and Industry")</span></a>
+                                                <!-- <span class="divider">-</span>
+                                                <a href="#" class="company">Unified</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial-image">
+                                    <a href="https://www.micci.com/Index.aspx"><img src="/images/fpartners/4.jpg" alt="images"></a>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-author">
+                                            <a href="https://www.micci.com/Index.aspx"><strong class="author-name">MICCI</strong></a><br>
+                                            <div class="author-info">
+                                                <a href="https://www.micci.com/Index.aspx"><span class="subtitle">@lang("Malaysian International Chamber of Commerce & Industry")</span></a>
+                                                <!-- <span class="divider">-</span>
+                                                <a href="#" class="company">Unified</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial-image">
+                                    <a href="https://www.indianimporterschambers.com/"><img src="/images/fpartners/5.jpg" alt="images"></a>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-author">
+                                            <a href="https://www.indianimporterschambers.com/"><strong class="author-name">IICCI</strong></a><br>
+                                            <div class="author-info">
+                                                <a href="https://www.indianimporterschambers.com/"><span class="subtitle">@lang("Indian Importers Chamber of Commerce and Industry")</span></a> 
+                                                <!-- <span class="divider">-</span>
+                                                <a href="#" class="company">Unified</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial-image" >
+                                    <a href="https://bccci-bd.org/"><img src="/images/fpartners/6.jpg" alt="images"></a>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-author">
+                                            <a href="https://bccci-bd.org/"><strong class="author-name">BCCCI</strong></a><br>
+                                            <div class="author-info">
+                                                <a href="https://bccci-bd.org/"><span class="subtitle">@lang("Bangladesh China Chamber of Commerce and Industry")</span></a>
+                                                <!-- <span class="divider">-</span>
+                                                <a href="#" class="company">Unified</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- /.testimonial -->
+
+                        </div><!-- /.flat-testimonial -->
+                    </div><!-- /.col-md-12 -->
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+        </div><!-- /.flat-row -->
+
         <div class="fluit" style="margin-bottom: -10px;">
             <iframe align="center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.2518319499841!2d69.21856252920595!3d41.355331205372956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d4e64adf79d%3A0x3a39127fd8ff297b!2sO%E2%80%99zbekiston%20Eksportchilar%20Uyushmasi!5e1!3m2!1suz!2s!4v1590062066869!5m2!1suz!2s" style="width: 100% ; height: 400px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div><!-- /#flat-map -->
