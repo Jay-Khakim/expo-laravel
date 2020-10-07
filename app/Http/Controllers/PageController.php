@@ -18,9 +18,10 @@ class PageController extends Controller
 {   
     // Main
     public function index(){
-        $category = Category::where('name_en', 'Main banner')->first();
+        $category = Category::where('name_en', 'Upcoming enent')->first();
         // dd($category->id);
-        $banner_news = News::where('type', 'news')
+        $banner_news = News::where('type', 'event')
+        ->where('category_id', $category)
         ->where('media_type', 'article')
         ->orderBy("id", "desc")
         ->take(2)
@@ -31,14 +32,14 @@ class PageController extends Controller
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
         ->orderBy("id", "desc")
-        ->skip(2)
+        // ->skip(2)
         ->take(2)
         ->get();
         // dd($latests);
         $right_side_latests = News::where('type', 'news')
         ->where('media_type', 'article')
         ->orderBy("id", "desc")
-        ->skip(4)
+        ->skip(2)
         ->take(4)
         ->get();
         // dd($banner_news);

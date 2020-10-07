@@ -111,18 +111,24 @@
                                                 
                                                 </span>
                                             </h4>
-                                            <a href="news-sub.php"><img src="/storage/{{$last->image1}}" alt="{{$last->title}}"></a>
+                                            <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"><img src="/storage/{{$last->image1}}" alt="{{$last->title}}"></a>
                                         </div>
                                         <div class="entry-content-wrap">
                                             <div class="entry-header">
                                                 <h2 class="entry-title">
-                                                    <a href="news-sub.php">{{$last->title}}</a>
+                                                    <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}">{{$last->title}}</a>
                                                 </h2>
                                             </div>
                                             <div class="entry-footer">
                                                 <div class="entry-meta">
                                                     <span class="entry-author"><a href="#">@lang("Headquarter")</a></span>
-                                                    <span class="entry-categories"><a href="#">@lang("PR manager")</a></span>
+                                                    <span class="entry-categories"><a href="#">
+                                                        @if ($last->author_en)
+                                                            {{$last->author}}
+                                                        @else 
+                                                            @lang("PR manager")
+                                                        @endif
+                                                    </a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -516,7 +522,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="view-all-testimonial">
-                            <a href="team.php" class="link2">@lang("All personnel")<i class="fa fa-chevron-right"></i></a>
+                            <a href="{{route('headquater', app()->getLocale())}}" class="link2">@lang("All personnel")<i class="fa fa-chevron-right"></i></a>
                         </p>
                     </div><!-- /.col-md-12 -->
                 </div><!-- /.row -->
@@ -565,7 +571,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="view-all-testimonial">
-                            <a href="sub-team.php" class="link2">@lang("All personnel")<i class="fa fa-chevron-right"></i></a>
+                            <a href="{{route('territorial', app()->getLocale())}}" class="link2">@lang("All personnel")<i class="fa fa-chevron-right"></i></a>
                         </p>
                     </div><!-- /.col-md-12 -->
                 </div><!-- /.row -->

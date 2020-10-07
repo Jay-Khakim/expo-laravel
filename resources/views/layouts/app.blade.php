@@ -20,7 +20,7 @@
     @yield('css')
 
     {{-- Jot form --}}
-    @if (app()->getLocale() === 'en')()
+    @if (app()->getLocale() === 'en')
         <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"> new JotformFeedback({ formId: "202652118441447", buttonText: "@lang('Membership.')", base: "https://form.jotform.com/", background: "#1CBAC8", fontColor: "#FFFFFF", buttonSide: "right", buttonAlign: "center", type: false, width: 700, height: 500, isCardForm: false }); 
     </script>
     @endif
