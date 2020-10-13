@@ -142,7 +142,7 @@ class StaffCrudController extends CrudController
         CRUD::field('twitter')->size(3);
         CRUD::addField(
             [
-                'label' => "Image",
+                'label' => "Image 206x151 px",
                 'name' => "image",
                 'type' => 'image',
                 // 'crop' => true, // set to true to allow cropping, false to disable
