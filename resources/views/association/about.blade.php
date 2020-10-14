@@ -112,7 +112,7 @@
                                     <div class="widget widget_text">
                                         <div class="textwidget">
                                             <h4 class="widget_title">@lang("Presentation about association")</h4>
-                                            <p>@lang("The Association of Exporters of Uzbekistan covers about 4,000 small and medium-sized businesses in almost all sectors of the economy of the Republic of Uzbekistan.") <a href="#" class="scheme2">info@uzbekmartuz.com </a></p>
+                                            <p>@lang("The Association of Exporters of Uzbekistan has set a regular communication up with more than 10,000 small and medium-sized businesses in almost all sectors of the economy of the Republic of Uzbekistan.") <a href="#" class="scheme2">info@uzbekmartuz.com </a></p>
                                             <form class="widget-form" action="/uyushma.pdf">
                                                 <!-- <p>
                                                     <input type="text" name="EMAIL" placeholder="Your email address">

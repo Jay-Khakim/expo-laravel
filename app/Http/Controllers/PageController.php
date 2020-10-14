@@ -19,14 +19,12 @@ class PageController extends Controller
     // Main
     public function index(){
         $category = Category::where('name_en', 'Upcoming enent')->first();
-        // dd($category->id);
         $banner_news = News::where('type', 'event')
-        ->where('category_id', $category)
+        ->where('category_id', 6)
         ->where('media_type', 'article')
         ->orderBy("id", "desc")
         ->take(2)
         ->get();
-        
         $id = count(News::all());
 
         $latests = News::where('type', 'news')
