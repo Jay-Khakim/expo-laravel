@@ -11,7 +11,7 @@
                                         <div class="custom-info">
                                             <span>@lang("Contact us")</span>
                                             <span><i class="fa fa-reply"></i>info@exportuz.com </span> 
-                                            <span><i class="fa fa-map-marker"></i>@lang("8A, Korakamish street, Olmazor region, Tahskent city")</span> 
+                                            <span><i class="fa fa-map-marker"></i>@lang("8A, Korakamish street, Olmazor region, Tashkent city")</span> 
                                             <span><i class="fa fa-phone"></i>+99871 207 00 98</span>
                                         </div>
                                     </div>
