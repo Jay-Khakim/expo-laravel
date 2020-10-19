@@ -42,7 +42,10 @@
                     <div class="summary">
                         <h3 class="product_title">{{$member->name}}</h3>
                         <div>
-                            <p><strong>@lang("Certificate number") </strong> {{$member->certificate_number}}</p>
+                            @if ($member->certificate_number)
+                                <p><strong>@lang("Certificate number") </strong> {{$member->certificate_number}}</p>
+                            @endif
+                            
                             <p><strong>@lang("Tax Identification Number"): </strong> {{$member->inn}}</p>
                             <p><strong>@lang("Expiry date"): </strong> <b>{{$member->expiry_date->format('Y-m-d')}}</b></p>
                         </div>
@@ -54,9 +57,12 @@
                             @endif
                             
                         </div>
-                        <form class="cart" action="/storage/certificate{{$member->file}}">
-                            <button type="submit" class="single_add_to_cart_button button alt">@lang("Certificate")</button>
-                        </form>
+                        @if ($member->file)
+                            <form class="cart" action="/storage/certificate{{$member->file}}">
+                                <button type="submit" class="single_add_to_cart_button button alt">@lang("Certificate")</button>
+                            </form>
+                        @endif
+                        
                     </div><!-- /.summary -->
 
                     <div class="flat-tabs woocommerce-tabs">

@@ -30,10 +30,11 @@ class MembershipRequest extends FormRequest
             'name_en' => 'required|min:2|max:255',
             'name_uz' => 'required|min:2|max:255',
             'name_ru' => 'required|min:2|max:255',
-            'certificate_number' => 'required',
+            'slug_en' => 'required',
+            // 'certificate_number' => 'required',
             'inn' => 'required',
             'expiry_date'=>'required',
-            'file' => 'required|file',
+            // 'file' => 'required|file',
             'image'=> 'required'
 
         ];

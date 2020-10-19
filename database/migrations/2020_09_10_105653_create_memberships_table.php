@@ -20,13 +20,13 @@ class CreateMembershipsTable extends Migration
             $table->string('name_uz', 300);
             $table->string('name_ru', 300);
             $table->string('slug_en', 300)->unique()->nullable();
-            $table->bigInteger('certificate_number');
+            $table->bigInteger('certificate_number')->nullable();
             $table->bigInteger('inn');
             $table->date('expiry_date');
             $table->longText('desc_en')->nullable();
             $table->longText('desc_uz')->nullable();
             $table->longText('desc_ru')->nullable();
-            $table->string('file', 300);
+            $table->string('file', 300)->nullable();
             $table->string('web')->nullable();
             $table->string('email', 100)->nullable();
             $table->char('phone', 25)->nullable();
