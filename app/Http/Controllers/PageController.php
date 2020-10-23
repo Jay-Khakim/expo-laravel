@@ -93,7 +93,8 @@ class PageController extends Controller
 
     public function memberlist(){
 
-        $members = Membership::where('status', 'active')->paginate(8);
+        // $members = Membership::where('status', 'active')->paginate(8);
+        $members = Membership::paginate(16);
         return view('membership.members-list')->with(compact('members'));
     }
 

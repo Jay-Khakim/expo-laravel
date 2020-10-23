@@ -50,7 +50,16 @@
                                         <div class="portfolio-info">
                                             <div class="portfolio-info-wrap">
                                                 <h6 class="portfolio-title">
-                                                    <a href="{{route('single-member', [app()->getLocale(), $member->slug_en])}}">{{$member->name}}</a>
+                                                    <a href="{{route('single-member', [app()->getLocale(), $member->slug_en])}}">
+                                                        {{-- {{$member->name}} --}}
+                                                        @php
+                                                            if(strlen($member->name)> 23){
+                                                                echo substr($member->name, 0, 23)."...";
+                                                            }else {
+                                                                echo $member->name;
+                                                            }  
+                                                        @endphp
+                                                    </a>
                                                 </h6>
                                             </div>
                                         </div>
@@ -59,10 +68,13 @@
                             @endforeach
                             
                         </div><!-- /.portfolio -->
-                        {{$members->links()}}
+                        
                     </div><!-- /.flat-portfolio -->
+                    
                 </div><!-- /.flat-wrapper -->
+                
             </div><!-- /.row -->
+            {{$members->links()}}
         </div><!-- /.container -->
     </section>
-@endsection
+@endsection 
