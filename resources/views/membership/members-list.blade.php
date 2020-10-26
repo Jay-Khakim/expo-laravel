@@ -37,7 +37,7 @@
                 <div class="flat-wrapper">
                     <div class="flat-portfolio portfolio-grid">
                         <ul class="portfolio-filter">
-                            <li class="active"><a data-filter="*" href="javascript:void(0)">@lang("Барча аъзолар")</a></li>
+                            <li class="active"><a data-filter="*" href="javascript:void(0)">@lang("All members")</a></li>
                         </ul><!-- /.project-filter -->
 
                         <div class="portfolio"> 
