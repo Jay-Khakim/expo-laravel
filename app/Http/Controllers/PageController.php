@@ -70,7 +70,7 @@ class PageController extends Controller
     }
 
     public function foreign(){
-        $foreign_employers= Staff::where('status', 'foreign')->paginate(5);
+        $foreign_employers= Staff::where('status', 'international')->paginate(5);
 
         return view('association.foreign_division')->with(compact('foreign_employers'));
     }
