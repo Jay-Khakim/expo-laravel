@@ -117,7 +117,7 @@
                                     <ul>
                                         @foreach ($latests as $last)
                                             <li>
-                                                <a href="#"> {{$last->title}} </a>
+                                                <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"> {{$last->title}} </a>
                                                 <span class="post-date">
                                                     @if ($last->created_at->format('m') == 1)
                                                         @lang("Jan")

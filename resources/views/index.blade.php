@@ -116,7 +116,15 @@
                                         <div class="entry-content-wrap">
                                             <div class="entry-header">
                                                 <h2 class="entry-title">
-                                                    <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}">{{$last->title}}</a>
+                                                    <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}">
+                                                        @php
+                                                        if(strlen($last->title)> 45){
+                                                            echo substr($last->title, 0, 45)."...";
+                                                        }else {
+                                                            echo $last->title;
+                                                        }  
+                                                        @endphp 
+                                                        </a>
                                                 </h2>
                                             </div>
                                             <div class="entry-footer">
@@ -144,12 +152,20 @@
                         <article class="latest-post">
                             <div class="entry-wrapper clearfix">
                                 <div class="entry-cover">
-                                    <a href="news.php"><img src="/storage/{{$item->image1}}" width="130" alt="images"></a>
+                                    <a href="{{route('single-news', [app()->getLocale(), $item->slug_en])}}"><img src="/storage/{{$item->image1}}" width="130" alt="images"></a>
                                 </div>
                                 <div class="entry-content-wrap">
                                     <div class="entry-header">
                                         <h2 class="entry-title">
-                                            <a href="news.php">{{$item->title}}</a>
+                                            <a href="{{route('single-news', [app()->getLocale(), $item->slug_en])}}">
+                                                @php
+                                                if(strlen($item->title)> 45){
+                                                    echo substr($item->title, 0, 45)."...";
+                                                }else {
+                                                    echo $item->title;
+                                                }  
+                                                @endphp 
+                                            </a>
                                         </h2>
                                     </div>
                                     <div class="entry-footer">

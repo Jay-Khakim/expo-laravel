@@ -88,7 +88,15 @@
                                             <div class="entry-content-wrap">
                                                 <div class="entry-header">
                                                     <h2 class="entry-title">
-                                                        <a target="_blank" href="/storage/{{$item->image1}}">{{$item->title}}</a>
+                                                        <a target="_blank" href="/storage/{{$item->image1}}">
+                                                            @php
+                                                            if(strlen($item->title)> 45){
+                                                                echo substr($item->title, 0, 45)."...";
+                                                            }else {
+                                                                echo $item->title;
+                                                            }  
+                                                            @endphp
+                                                        </a>
                                                     </h2>
                                                 </div>
                                                 <div class="entry-footer">

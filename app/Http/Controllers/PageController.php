@@ -22,21 +22,21 @@ class PageController extends Controller
         $banner_news = News::where('type', 'event')
         ->where('category_id', 6)
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->take(2)
         ->get();
         $id = count(News::all());
 
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         // ->skip(2)
         ->take(2)
         ->get();
         // dd($latests);
         $right_side_latests = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->skip(2)
         ->take(4)
         ->get();
@@ -133,7 +133,7 @@ class PageController extends Controller
 
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->take(4)
         ->get();
 
@@ -141,7 +141,7 @@ class PageController extends Controller
         
         $mains = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->skip(4)
         ->take($id-4)
         ->paginate(2);
@@ -156,7 +156,7 @@ class PageController extends Controller
 
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->take(4)
         ->get();
 
@@ -173,7 +173,7 @@ class PageController extends Controller
         $mains = News::where('type', 'news')
         ->where('category_id', $id->id)
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         // ->skip(4)
         // ->take($id-4)
         ->paginate(2);
@@ -182,7 +182,7 @@ class PageController extends Controller
 
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->take(4)
         ->get();
 
@@ -193,7 +193,7 @@ class PageController extends Controller
     public function events(){
         $news = News::where('type', 'event')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->paginate(6);
 
         return view('news.events')->with(compact('news'));
@@ -202,7 +202,7 @@ class PageController extends Controller
     public function press(){
         $news = News::where('type', 'pressreliese')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->paginate(4);
 
         return view('news.press')->with(compact('news'));
@@ -219,19 +219,19 @@ class PageController extends Controller
 
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
-        ->orderBy("id", "desc")
+        ->orderBy("created_at", "desc")
         ->take(4)
         ->get();
 
         $videos = News::where('media_type', 'video')
-        ->orderBy('id', 'desc')
+        ->orderBy('created_at', 'desc')
         ->paginate(5);
         return view('media.video')->with(compact('latests', 'videos'));
     }
 
     public function photo(){
 
-        $photos = Picture::orderBy("id", "desc")
+        $photos = Picture::orderBy("created_at", "desc")
         ->paginate(8);
         return view('media.photo')->with(compact('photos'));
     }

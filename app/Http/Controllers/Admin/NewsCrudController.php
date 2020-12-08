@@ -263,8 +263,8 @@ class NewsCrudController extends CrudController
                 'label' => "Picture 1",
                 'name' => "image1",
                 'type' => 'image',
-                // 'crop' => true, // set to true to allow cropping, false to disable
-                'aspect_ratio' => 2, // ommit or set to 0 to allow any aspect ratio
+                'crop' => true, // set to true to allow cropping, false to disable
+                'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
                 'disk'      => 'uploads', // in case you need to show images from a different disk
                 'save_path_to_database' => true,
                 // 'fake' => true,
@@ -276,8 +276,8 @@ class NewsCrudController extends CrudController
                 'label' => "Picture 2 Optional",
                 'name' => "image2",
                 'type' => 'image',
-                // 'crop' => true, // set to true to allow cropping, false to disable
-                'aspect_ratio' => 2, // ommit or set to 0 to allow any aspect ratio
+                'crop' => true, // set to true to allow cropping, false to disable
+                'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
                 'disk'      => 'uploads', // in case you need to show images from a different disk
                 // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
             ]
@@ -287,8 +287,8 @@ class NewsCrudController extends CrudController
                 'label' => "Picture 3 Optional",
                 'name' => "image3",
                 'type' => 'image',
-                // 'crop' => true, // set to true to allow cropping, false to disable
-                'aspect_ratio' => 2, // ommit or set to 0 to allow any aspect ratio
+                'crop' => true, // set to true to allow cropping, false to disable
+                'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
                 'disk'      => 'uploads', // in case you need to show images from a different disk
                 // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
             ]
@@ -298,8 +298,8 @@ class NewsCrudController extends CrudController
                 'label' => "Picture 4 Optional",
                 'name' => "image4",
                 'type' => 'image',
-                // 'crop' => true, // set to true to allow cropping, false to disable
-                'aspect_ratio' => 2, // ommit or set to 0 to allow any aspect ratio
+                'crop' => true, // set to true to allow cropping, false to disable
+                'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
                 'disk'      => 'uploads', // in case you need to show images from a different disk
                 // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
             ]

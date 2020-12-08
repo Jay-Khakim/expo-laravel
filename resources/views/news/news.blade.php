@@ -132,7 +132,7 @@
                                     <ul>
                                         @foreach ($latests as $last)
                                             <li>
-                                                <a href="#"> {{$last->title}} </a>
+                                                <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"> {{$last->title}} </a>
                                                 <span class="post-date">
                                                     @if ($last->created_at->format('m') == 1)
                                                         @lang("Jan")
@@ -204,20 +204,6 @@
                                         </div>
                                     </div><!-- /.textwidget -->
                                 </div><!-- /.widget_text -->
-
-                                {{-- <div class="widget widget_tag_cloud">
-                                    <h4 class="widget-title">Калит сўзлар</h4>
-                                    <div class="tagcloud">
-                                        <a href="#">Ходимлар</a>
-                                        <a href="#">Уюшма</a>
-                                        <a href="#">Учрашув</a>
-                                        <a href="#">Маҳаллий</a>
-                                        <a href="#">Хорижий</a>
-                                        <a href="#">Ташкилотлар</a>
-                                        <a href="#">Фаолияти</a>
-                                        <a href="#">Хизматлар</a>
-                                    </div>
-                                </div><!-- /.widget_tag_cloud --> --}}
                             </div><!-- /.sidebar -->
                         </div><!-- /.sidebars-wrap -->
                     </div><!-- /.sidebars -->
