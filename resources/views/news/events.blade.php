@@ -85,25 +85,23 @@
                                                 </h4>
                                                 <a target="_blank" href="/storage/{{$item->image1}}"><img src="/storage/{{$item->image1}}" alt="{{$item->title}}"></a>
                                             </div>
-                                            <div class="entry-content-wrap">
+                                            <div class="entry-content-wrap" style="padding: 0px;">
                                                 <div class="entry-header">
                                                     <h2 class="entry-title">
-                                                        <a target="_blank" href="/storage/{{$item->image1}}">
-                                                            @php
-                                                            if(strlen($item->title)> 45){
-                                                                echo substr($item->title, 0, 45)."...";
-                                                            }else {
-                                                                echo $item->title;
-                                                            }  
-                                                            @endphp
+                                                        <a target="_blank" href="/storage/{{$item->image}}">
                                                         </a>
+                                                        <div class="general flat-faq">
+                                                            <div class="flat-accordion style1">
+                                                                <div class="flat-toggle" >
+                                                                    <h6 class="toggle-title ">@lang("More")</h6>
+                                                                    <div class="toggle-content">
+                                                                        <p style="font-size: 18px">{{$item->title}}</p>
+                                                                    </div>
+                                                                </div><!-- /toggle -->
+                                                            </div><!-- /.flat-accordion -->
+                                                        </div><!-- /.flat-clients -->                        
+                                
                                                     </h2>
-                                                </div>
-                                                <div class="entry-footer">
-                                                    <div class="entry-meta">
-                                                        {{-- <span class="entry-author"><a href="javascript:void(0)">ВКС</a></span> --}}
-                                                        <span class="entry-categories"><a href="javascript:void(0)">ZOOM</a></span>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
