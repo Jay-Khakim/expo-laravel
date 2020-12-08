@@ -43,12 +43,25 @@
                                         <div class="portfolio-thumbnail">
                                             <a href="/storage/{{$photo->image}}"><img src="/storage/{{$photo->image}}" alt="{{$photo->name}}"></a>
                                         </div>
-                                        <div class="portfolio-info">
-                                            <div class="portfolio-info-wrap">
-                                                <h6 class="portfolio-title">
-                                                    <a href="/storage/{{$photo->image}}" target="_blank">{{$photo->name}}</a>
-                                                </h6>
+                                        <div class="entry-content-wrap" style="padding: 0px;">
+                                            <div class="entry-header">
+                                                <h2 class="entry-title">
+                                                    <a target="_blank" href="/storage/{{$photo->image}}">
+                                                    </a>
+                                                    <div class="general flat-faq">
+                                                        <div class="flat-accordion style1">
+                                                            <div class="flat-toggle" >
+                                                                <h6 class="toggle-title ">@lang("More")</h6>
+                                                                <div class="toggle-content">
+                                                                    <p style="font-size: 18px">{{$photo->name}}</p>
+                                                                </div>
+                                                            </div><!-- /toggle -->
+                                                        </div><!-- /.flat-accordion -->
+                                                    </div><!-- /.flat-clients -->                        
+                            
+                                                </h2>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div><!-- /.portfolio-item -->
