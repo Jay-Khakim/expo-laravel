@@ -151,109 +151,154 @@ class NewsCrudController extends CrudController
         CRUD::field('subtitle_en');
         CRUD::field('subtitle_uz');
         CRUD::field('subtitle_ru');
-        CRUD::field('slug_en');
-        CRUD::field('intro_en');
-        CRUD::field('intro_uz');
-        CRUD::field('intro_ru');
+        // CRUD::field('slug_en');
+        // CRUD::field('intro_en');
+        CRUD::addField(
+            [   // CKEditor
+                'name'          => 'intro_en',
+                'label'         => 'Text in English',
+                'type'          => 'ckeditor',
+
+                // optional:
+                // 'extra_plugins' => ['oembed', 'widget'],
+                'options'       => [
+                    'autoGrow_minHeight'   => 100,
+                    'autoGrow_bottomSpace' => 30,
+                    'removePlugins'        => 'resize,maximize',
+                ]
+            ],
+        );
+        CRUD::addField(
+            [   // CKEditor
+                'name'          => 'intro_uz',
+                'label'         => 'Text in Uzbek',
+                'type'          => 'ckeditor',
+
+                // optional:
+                // 'extra_plugins' => ['oembed', 'widget'],
+                'options'       => [
+                    'autoGrow_minHeight'   => 100,
+                    'autoGrow_bottomSpace' => 30,
+                    'removePlugins'        => 'resize,maximize',
+                ]
+            ],
+        );
+        CRUD::addField(
+            [   // CKEditor
+                'name'          => 'intro_ru',
+                'label'         => 'Text in Russian',
+                'type'          => 'ckeditor',
+
+                // optional:
+                // 'extra_plugins' => ['oembed', 'widget'],
+                'options'       => [
+                    'autoGrow_minHeight'   => 100,
+                    'autoGrow_bottomSpace' => 30,
+                    'removePlugins'        => 'resize,maximize',
+                ]
+            ],
+        );
+        // CRUD::field('intro_uz');
+        // CRUD::field('intro_ru');
         // CRUD::field('highlighted_en');
-        CRUD::addField(
-            [   // CKEditor
-                'name'          => 'highlighted_en',
-                'label'         => 'Highlighted text in English',
-                'type'          => 'ckeditor',
+        // CRUD::addField(
+        //     [   // CKEditor
+        //         'name'          => 'highlighted_en',
+        //         'label'         => 'Highlighted text in English',
+        //         'type'          => 'ckeditor',
 
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 100,
-                    'autoGrow_bottomSpace' => 30,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ],
-        );
-        CRUD::addField(
-            [   // CKEditor
-                'name'          => 'highlighted_ru',
-                'label'         => 'Highlighted text in Russian',
-                'type'          => 'ckeditor',
+        //         // optional:
+        //         // 'extra_plugins' => ['oembed', 'widget'],
+        //         'options'       => [
+        //             'autoGrow_minHeight'   => 100,
+        //             'autoGrow_bottomSpace' => 30,
+        //             'removePlugins'        => 'resize,maximize',
+        //         ]
+        //     ],
+        // );
+        // CRUD::addField(
+        //     [   // CKEditor
+        //         'name'          => 'highlighted_ru',
+        //         'label'         => 'Highlighted text in Russian',
+        //         'type'          => 'ckeditor',
 
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 100,
-                    'autoGrow_bottomSpace' => 30,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ],
-        );
-        CRUD::addField(
-            [   // CKEditor
-                'name'          => 'highlighted_uz',
-                'label'         => 'Highlighted text in Uzbek',
-                'type'          => 'ckeditor',
+        //         // optional:
+        //         // 'extra_plugins' => ['oembed', 'widget'],
+        //         'options'       => [
+        //             'autoGrow_minHeight'   => 100,
+        //             'autoGrow_bottomSpace' => 30,
+        //             'removePlugins'        => 'resize,maximize',
+        //         ]
+        //     ],
+        // );
+        // CRUD::addField(
+        //     [   // CKEditor
+        //         'name'          => 'highlighted_uz',
+        //         'label'         => 'Highlighted text in Uzbek',
+        //         'type'          => 'ckeditor',
 
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 100,
-                    'autoGrow_bottomSpace' => 30,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ],
-        );
+        //         // optional:
+        //         // 'extra_plugins' => ['oembed', 'widget'],
+        //         'options'       => [
+        //             'autoGrow_minHeight'   => 100,
+        //             'autoGrow_bottomSpace' => 30,
+        //             'removePlugins'        => 'resize,maximize',
+        //         ]
+        //     ],
+        // );
         // CRUD::field('highlighted_uz');
         // CRUD::field('highlighted_ru');
         // CRUD::field('body_en');
-        CRUD::addField(
-            [   // CKEditor
-                'name'          => 'body_en',
-                'label'         => 'Body text in English',
-                'type'          => 'ckeditor',
+        // CRUD::addField(
+        //     [   // CKEditor
+        //         'name'          => 'body_en',
+        //         'label'         => 'Body text in English',
+        //         'type'          => 'ckeditor',
 
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 100,
-                    'autoGrow_bottomSpace' => 30,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ],
-        );
-        CRUD::addField(
-            [   // CKEditor
-                'name'          => 'body_ru',
-                'label'         => 'Body text in Russian',
-                'type'          => 'ckeditor',
+        //         // optional:
+        //         // 'extra_plugins' => ['oembed', 'widget'],
+        //         'options'       => [
+        //             'autoGrow_minHeight'   => 100,
+        //             'autoGrow_bottomSpace' => 30,
+        //             'removePlugins'        => 'resize,maximize',
+        //         ]
+        //     ],
+        // );
+        // CRUD::addField(
+        //     [   // CKEditor
+        //         'name'          => 'body_ru',
+        //         'label'         => 'Body text in Russian',
+        //         'type'          => 'ckeditor',
 
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 100,
-                    'autoGrow_bottomSpace' => 30,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ],
-        );
-        CRUD::addField(
-            [   // CKEditor
-                'name'          => 'body_uz',
-                'label'         => 'Body text in Uzbek',
-                'type'          => 'ckeditor',
+        //         // optional:
+        //         // 'extra_plugins' => ['oembed', 'widget'],
+        //         'options'       => [
+        //             'autoGrow_minHeight'   => 100,
+        //             'autoGrow_bottomSpace' => 30,
+        //             'removePlugins'        => 'resize,maximize',
+        //         ]
+        //     ],
+        // );
+        // CRUD::addField(
+        //     [   // CKEditor
+        //         'name'          => 'body_uz',
+        //         'label'         => 'Body text in Uzbek',
+        //         'type'          => 'ckeditor',
 
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 100,
-                    'autoGrow_bottomSpace' => 30,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ],
-        );
-        CRUD::field('body_uz');
-        CRUD::field('body_ru');
-        CRUD::field('conclusion_en');
-        CRUD::field('conclusion_uz');
-        CRUD::field('conclusion_ru');
+        //         // optional:
+        //         // 'extra_plugins' => ['oembed', 'widget'],
+        //         'options'       => [
+        //             'autoGrow_minHeight'   => 100,
+        //             'autoGrow_bottomSpace' => 30,
+        //             'removePlugins'        => 'resize,maximize',
+        //         ]
+        //     ],
+        // );
+        // CRUD::field('body_uz');
+        // CRUD::field('body_ru');
+        // CRUD::field('conclusion_en');
+        // CRUD::field('conclusion_uz');
+        // CRUD::field('conclusion_ru');
         CRUD::field('author_en')->size(4);
         CRUD::field('author_uz')->size(4);
         CRUD::field('author_ru')->size(4);
