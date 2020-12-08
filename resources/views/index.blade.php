@@ -111,12 +111,12 @@
                                                 
                                                 </span>
                                             </h4>
-                                            <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"><img src="/storage/{{$last->image1}}" alt="{{$last->title}}"></a>
+                                            <a href="{{route('single-news', [app()->getLocale(), $last->id])}}"><img src="/storage/{{$last->image1}}" alt="{{$last->title}}"></a>
                                         </div>
                                         <div class="entry-content-wrap">
                                             <div class="entry-header">
                                                 <h2 class="entry-title">
-                                                    <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}">
+                                                    <a href="{{route('single-news', [app()->getLocale(), $last->id])}}">
                                                         @php
                                                         if(strlen($last->title)> 45){
                                                             echo substr($last->title, 0, 45)."...";
@@ -152,12 +152,12 @@
                         <article class="latest-post">
                             <div class="entry-wrapper clearfix">
                                 <div class="entry-cover">
-                                    <a href="{{route('single-news', [app()->getLocale(), $item->slug_en])}}"><img src="/storage/{{$item->image1}}" width="130" alt="images"></a>
+                                    <a href="{{route('single-news', [app()->getLocale(), $item->id])}}"><img src="/storage/{{$item->image1}}" width="130" alt="images"></a>
                                 </div>
                                 <div class="entry-content-wrap">
                                     <div class="entry-header">
                                         <h2 class="entry-title">
-                                            <a href="{{route('single-news', [app()->getLocale(), $item->slug_en])}}">
+                                            <a href="{{route('single-news', [app()->getLocale(), $item->id])}}">
                                                 @php
                                                 if(strlen($item->title)> 45){
                                                     echo substr($item->title, 0, 45)."...";

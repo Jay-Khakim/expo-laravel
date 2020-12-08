@@ -149,10 +149,10 @@ class PageController extends Controller
         return view('news.news')->with(compact('latests','mains'));
     }
 
-    public function singlenews($language, $slug_en){
+    public function singlenews($language, $id){
 
         $dt = Carbon::now();
-        $single = News::where('slug_en', $slug_en)->first();
+        $single = News::where('id', $id)->first();
 
         $latests = News::where('type', 'news')
         ->where('media_type', 'article')
@@ -164,11 +164,11 @@ class PageController extends Controller
         return view('news.single-news')->with(compact('single', 'dt', 'latests'));
     }
 
-    public function categorynews($language, $slug_en){
+    public function categorynews($language, $id){
 
         $dt = Carbon::now();
 
-        $id = Category::where('slug_en', $slug_en)->first();
+        $id = Category::where('id', $id)->first();
         // dd($id);
         $mains = News::where('type', 'news')
         ->where('category_id', $id->id)

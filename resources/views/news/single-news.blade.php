@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('language')
     <li>
-        <a href="{{route('single-news', ['language' => 'en', 'slug_en' => $single->slug_en])}}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
+        <a href="{{route('single-news', ['language' => 'en', 'id' => $single->id])}}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
     </li>
     <li>
-        <a href="{{route('single-news', ['language' => 'ru', 'slug_en' => $single->slug_en])}}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
+        <a href="{{route('single-news', ['language' => 'ru', 'id' => $single->id])}}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
     </li>
     <li>
-        <a href="{{route('single-news', ['language' => 'uz', 'slug_en' => $single->slug_en])}}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
+        <a href="{{route('single-news', ['language' => 'uz', 'id' => $single->id])}}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
     </li>
 @endsection
 
@@ -152,7 +152,7 @@
                                     <ul>
                                         @foreach ($latests as $last)
                                             <li>
-                                                <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"> {{$last->title}} </a>
+                                                <a href="{{route('single-news', [app()->getLocale(), $last->id])}}"> {{$last->title}} </a>
                                                 <span class="post-date">
                                                     @if ($last->created_at->format('m') == 1)
                                                         @lang("Jan")

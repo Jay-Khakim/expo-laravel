@@ -86,7 +86,7 @@
                                                 </h4>
                                                 <div class="entry-header-content">
                                                     <h4 class="entry-title">
-                                                        <a href="{{route('single-news', [app()->getLocale(), $main->slug_en])}}">{{$main->title}}</a>
+                                                        <a href="{{route('single-news', [app()->getLocale(), $main->id])}}">{{$main->title}}</a>
                                                     </h4>
                                                     <div class="entry-meta">
                                                         <i class="fa fa-user"></i>
@@ -99,7 +99,7 @@
 
                                             <div class="entry-cover">
                                                 <a href="news-sub.php">
-                                                    <a href="{{route('single-news', [app()->getLocale(), $main->slug_en])}}"> <img style="width:100%" src="/storage/{{$main->image1}}" alt="{{$main->title}}"></a>
+                                                    <a href="{{route('single-news', [app()->getLocale(), $main->id])}}"> <img style="width:100%" src="/storage/{{$main->image1}}" alt="{{$main->title}}"></a>
                                                 </a>
                                             </div><!-- /.entry-cover -->
 
@@ -113,7 +113,7 @@
                                                 }  
                                                 @endphp
                                                 </p>
-                                                <div class="readmore"><a href="{{route('single-news', [app()->getLocale(), $main->slug_en])}}" class="more-link">@lang("More")</a></div>
+                                                <div class="readmore"><a href="{{route('single-news', [app()->getLocale(), $main->id])}}" class="more-link">@lang("More")</a></div>
                                             </div><!-- /.entry-content -->
                                         </div><!-- /.entry-wrapper -->
                                     </article><!-- /.blog-post -->
@@ -132,7 +132,7 @@
                                     <ul>
                                         @foreach ($latests as $last)
                                             <li>
-                                                <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"> {{$last->title}} </a>
+                                                <a href="{{route('single-news', [app()->getLocale(), $last->id])}}"> {{$last->title}} </a>
                                                 <span class="post-date">
                                                     @if ($last->created_at->format('m') == 1)
                                                         @lang("Jan")

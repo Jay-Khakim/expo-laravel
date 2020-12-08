@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('language')
     <li>
-        <a href="{{route('category-news', ['language' => 'en', 'slug_en' => $id->slug_en])}}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
+        <a href="{{route('category-news', ['language' => 'en', 'id' => $id->id])}}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
     </li>
     <li>
-        <a href="{{route('category-news', ['language' => 'ru', 'slug_en' => $id->slug_en])}}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
+        <a href="{{route('category-news', ['language' => 'ru', 'id' => $id->id])}}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
     </li>
     <li>
-        <a href="{{route('category-news', ['language' => 'uz', 'slug_en' => $id->slug_en])}}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
+        <a href="{{route('category-news', ['language' => 'uz', 'id' => $id->id])}}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
     </li>
 @endsection
 
@@ -88,7 +88,7 @@
                                                     </h4>
                                                     <div class="entry-header-content">
                                                         <h4 class="entry-title">
-                                                            <a href="{{route('single-news', [app()->getLocale(), $main->slug_en])}}">{{$main->title}}</a>
+                                                            <a href="{{route('single-news', [app()->getLocale(), $main->id])}}">{{$main->title}}</a>
                                                         </h4>
                                                         <div class="entry-meta">
                                                             <i class="fa fa-user"></i>
@@ -101,7 +101,7 @@
 
                                                 <div class="entry-cover">
                                                     <a href="news-sub.php">
-                                                        <a href="{{route('single-news', [app()->getLocale(), $main->slug_en])}}"> <img style="width:100%" src="/storage/{{$main->image1}}" alt="{{$main->title}}"></a>
+                                                        <a href="{{route('single-news', [app()->getLocale(), $main->id])}}"> <img style="width:100%" src="/storage/{{$main->image1}}" alt="{{$main->title}}"></a>
                                                     </a>
                                                 </div><!-- /.entry-cover -->
 
@@ -115,7 +115,7 @@
                                                     }  
                                                     @endphp
                                                     </p>
-                                                    <div class="readmore"><a href="{{route('single-news', [app()->getLocale(), $main->slug_en])}}" class="more-link">@lang("More")</a></div>
+                                                    <div class="readmore"><a href="{{route('single-news', [app()->getLocale(), $main->id])}}" class="more-link">@lang("More")</a></div>
                                                 </div><!-- /.entry-content -->
                                             </div><!-- /.entry-wrapper -->
                                         </article><!-- /.blog-post -->
