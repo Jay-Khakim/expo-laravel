@@ -73,7 +73,7 @@
                                                             @lang("Sep")
                                                         @endif
                                                         @if ($item->created_at->format('m') == 10)
-                                                            @lang("Okt")
+                                                            @lang("Oct")
                                                         @endif
                                                         @if ($item->created_at->format('m') == 11)
                                                             @lang("Nov")

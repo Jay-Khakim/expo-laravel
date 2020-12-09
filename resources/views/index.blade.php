@@ -99,7 +99,7 @@
                                                         @lang("Sep")
                                                     @endif
                                                     @if ($last->created_at->format('m') == 10)
-                                                        @lang("Okt")
+                                                        @lang("Oct")
                                                     @endif
                                                     @if ($last->created_at->format('m') == 11)
                                                         @lang("Nov")
