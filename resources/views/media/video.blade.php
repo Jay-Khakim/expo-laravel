@@ -73,7 +73,7 @@
                                                                 @lang("Sep")
                                                             @endif
                                                             @if ($video->created_at->format('m') == 10)
-                                                                @lang("Okt")
+                                                                @lang("Oct")
                                                             @endif
                                                             @if ($video->created_at->format('m') == 11)
                                                                 @lang("Nov")
@@ -117,7 +117,7 @@
                                     <ul>
                                         @foreach ($latests as $last)
                                             <li>
-                                                <a href="{{route('single-news', [app()->getLocale(), $last->slug_en])}}"> {{$last->title}} </a>
+                                                <a href="{{route('single-news', [app()->getLocale(), $last->id])}}"> {{$last->title}} </a>
                                                 <span class="post-date">
                                                     @if ($last->created_at->format('m') == 1)
                                                         @lang("Jan")
@@ -147,7 +147,7 @@
                                                         @lang("Sep")
                                                     @endif
                                                     @if ($last->created_at->format('m') == 10)
-                                                        @lang("Okt")
+                                                        @lang("Oct")
                                                     @endif
                                                     @if ($last->created_at->format('m') == 11)
                                                         @lang("Nov")
