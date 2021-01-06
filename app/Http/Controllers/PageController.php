@@ -164,14 +164,14 @@ class PageController extends Controller
         return view('news.single-news')->with(compact('single', 'dt', 'latests'));
     }
 
-    public function categorynews($language, $id){
+    public function categorynews($language, $sleg_en){
 
         $dt = Carbon::now();
 
-        $id = Category::where('id', $id)->first();
+        $sleg_en = Category::where('slug_en', $sleg_en)->first();
         // dd($id);
         $mains = News::where('type', 'news')
-        ->where('category_id', $id->id)
+        ->where('category_id', $sleg_en->id)
         ->where('media_type', 'article')
         ->orderBy("created_at", "desc")
         // ->skip(4)
@@ -187,7 +187,7 @@ class PageController extends Controller
         ->get();
 
         // dd($member);
-        return view('news.category-news')->with(compact( 'dt', 'id', 'latests', 'mains'));
+        return view('news.category-news')->with(compact( 'dt', 'sleg_en', 'latests', 'mains'));
     }
 
     public function events(){

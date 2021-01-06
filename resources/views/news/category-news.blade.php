@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('language')
     <li>
-        <a href="{{route('category-news', ['language' => 'en', 'id' => $id->id])}}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
+        <a href="{{route('category-news', ['language' => 'en', 'sleg_en' => $sleg_en->id])}}"><img src="/images/icon/1.jpg" alt="English language icon"><span>@lang("En")</span></a>
     </li>
     <li>
-        <a href="{{route('category-news', ['language' => 'ru', 'id' => $id->id])}}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
+        <a href="{{route('category-news', ['language' => 'ru', 'sleg_en' => $sleg_en->id])}}"><img src="/images/icon/2.jpg" alt="Russian language icon"><span>@lang("Ru")</span></a>
     </li>
     <li>
-        <a href="{{route('category-news', ['language' => 'uz', 'id' => $id->id])}}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
+        <a href="{{route('category-news', ['language' => 'uz', 'sleg_en' => $sleg_en->id])}}"><img src="/images/icon/3.jpg" alt="Uzbek Language Icon"><span>@lang("Uz")</span></a>
     </li>
 @endsection
 
@@ -22,7 +22,7 @@
                             <ul class="trail-items">
                                 <li class="trail-item"><a href="{{route('home', app()->getLocale())}}">@lang("Main")</a></li>
                                 <li class="trail-item"><a href="{{route('news', app()->getLocale())}}">@lang("The press")</a></li>
-                                <li class="trail-end"> {{$id->name}} </li>
+                                <li class="trail-end"> {{$sleg_en->name}} </li>
                             </ul>                   
                         </div>
                     </div><!-- /.page-title-captions -->                        
@@ -195,7 +195,7 @@
                                     <ul>
                                         <li><a href="{{route('category-news', [app()->getLocale(), 'export'])}}">@lang("Export news")</a></li>
                                         <li><a href="{{route('category-news', [app()->getLocale(), 'import-news'])}}">@lang("Import news")</a></li>
-                                        <li><a href="#">@lang("Official Meetings")</a></li>
+                                        <li><a href="{{route('events', app()->getLocale())}}">@lang("Official Meetings")</a></li>
                                         <li><a href="{{route('category-news', [app()->getLocale(), 'association'])}}">@lang("Association news")</a></li>
                                     </ul>
                                 </div><!-- /.widget_categories -->
