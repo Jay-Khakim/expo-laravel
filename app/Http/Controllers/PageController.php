@@ -213,6 +213,10 @@ class PageController extends Controller
         return view('information.statistics');
     }
 
+    public function open(){
+        return view('information.open');
+    }
+
 
     //Media
     public function video(){

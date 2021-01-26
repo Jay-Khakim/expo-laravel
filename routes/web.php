@@ -51,6 +51,7 @@ Route::group(['prefix' => '{language}'], function () {
 
     //Information 
     Route::get('/statistics', 'PageController@statistics')->name('statistics');
+    Route::get('/open-sources', 'PageController@open')->name('open');
 
     //Media 
     Route::get('/video', 'PageController@video')->name('video');
